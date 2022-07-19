@@ -702,4 +702,68 @@ Higest all-degree
 ```{r}
 nodes %>% slice_max(all_degree, n = 5)
 ```
-`
+
+### 4. Network visualisation 
+```{r}
+PATHS_PW_DIAGRAM <- PATHS_PW  %>% filter(!source_1=="local person" & !source_2=="local person") %>% select(source_2, source_1 ) %>% group_by(source_2, source_1 ) %>% count()
+names(PATHS_PW_DIAGRAM) <- c("Source", "Target", "weight")
+write.table(PATHS_PW_DIAGRAM, "./dataverse/paths_pw_diagram.csv", sep=";", row.names = F, col.names = T)
+
+
+PATHS_HM_DIAGRAM <- PATHS_HM  %>% select(source_2, source_1 ) %>% group_by(source_2, source_1 ) %>% count()
+names(PATHS_HM_DIAGRAM) <- c("Source", "Target", "weight")
+write.table(PATHS_HM_DIAGRAM, "./dataverse/paths_hm_diagram.csv", sep=";", row.names = F, col.names = T)
+
+```
+
+```{r}
+padiweb.output.filepath = "./figures/chord_diagram_padiweb.png"
+padiweb.output.nodes.legend = "./figures/chord_diagram_padiweb_nodes_legend.csv"
+
+healthmap.output.filepath = "./figures/chord_diagram_healthmap.png"
+healthmap.output.nodes.legend = "./figures/chord_diagram_healthmap_nodes_legend.csv"
+
+padiweb.links.filepath = "./dataverse/links_padiweb.csv"
+healthmap.links.filepath = "./dataverse/links_healthmap.csv"
+
+padiweb.edges.csv.filepath = "./dataverse/paths_pw_diagram.csv"
+padiweb.info.csv.filepath = "./dataverse/sources.csv"
+healthmap.edges.csv.filepath = "./dataverse/paths_hm_diagram.csv"
+healthmap.info.csv.filepath = "./dataverse/sources.csv"
+
+groups = retrieve.group.names(padiweb.info.csv.filepath)
+groups.adjusted = sapply(groups, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line group names for the sake of readibility in the plot, the same as in the function 'prepare.input.for.chord.diagram()' >> for color assignment, we need to reproduce these text adjustments here, as well
+colors.for.groups = create.colors.group.association(groups.adjusted)
+
+new_levels <- c("international vet auth.", "EBS tool",
+                "social platform", "press agency",
+                "online news source", "research org.", 
+                "radio, TV",  "national vet auth.",
+                "laboratory", "local off. auth.", 
+                "local vet auth.", "private company",                   
+                "national off. auth.")
+
+# Fill colour
+colors.for.group <- c(brewer.pal(8,'Dark2'), brewer.pal(name="Paired", n = length(new_levels)-8))
+names(colors.for.group) <- new_levels
+```
+
+Padiweb
+
+```{r}
+prepare.input.for.chord.diagram(padiweb.edges.csv.filepath, padiweb.info.csv.filepath, padiweb.links.filepath) # it creates 'padiweb.links.filepath'
+small.gap = 0.5
+big.gap = 1.8 
+create.chord.diagram(padiweb.links.filepath, padiweb.output.filepath, padiweb.output.nodes.legend,
+                     colors.for.group,  small.gap, 
+                     big.gap, include_legend = F)
+```
+
+Healthmap
+
+```{r}
+prepare.input.for.chord.diagram(healthmap.edges.csv.filepath, healthmap.info.csv.filepath, healthmap.links.filepath) # it creates 'healthmap.links.filepath'
+small.gap = 0.4
+create.chord.diagram(healthmap.links.filepath, healthmap.output.filepath, healthmap.output.nodes.legend, colors.for.group, small.gap, big.gap, include_legend = T)
+```
+
