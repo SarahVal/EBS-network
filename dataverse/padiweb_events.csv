@@ -1,0 +1,227 @@
+id_event;type_event;reference;disease;serotype;latitude;longitude;country;admin;locality;observationdate;reportingdate;host;type_host;at_risk;cases;dead;destroyed
+293;official;238793;Influenza - Avian;H5N1 HPAI;6.105563;116.229785;Malaysia;Sabah;Kampung Kauluan;2018-07-27;2018-08-06;domestic, chicken;domestic;28000;3000;3000;25000
+294;official;238790;Influenza - Avian;H5N6 HPAI;19.0306;105.5515;Viet Nam;Nghe An;Dien Lien;2018-07-28;2018-08-03;domestic, unspecified bird;domestic;2400;90;90;2310
+295;official;238791;Influenza - Avian;H5N6 HPAI;20.9105;106.609;Viet Nam;Hai Phong City;An Hong;2018-07-28;2018-08-03;domestic, unspecified bird;domestic;4720;1000;500;4220
+296;official;238792;Influenza - Avian;H5N6 HPAI;20.9063;106.5885;Viet Nam;Hai Phong City;An Hung;2018-07-30;2018-08-03;domestic, unspecified bird;domestic;5500;2000;1000;4500
+297;official;239196;Influenza - Avian;H5N1 HPAI;6.06639;116.2287;Malaysia;Sabah;Kampung Kebayau;2018-08-03;2018-08-25;domestic, chicken;domestic;1100;1;0;1100
+298;official;239017;Influenza - Avian;H5N2 HPAI;58.951231;46.514801;Russian Federation;Kostromskaya Oblast;Harino;2018-08-09;2018-08-16;domestic, unspecified bird;domestic;498485;506;506;1223
+299;official;244962;Influenza - Avian;H5N1 HPAI;19.547775;85.267157;India;Orissa;Naba;2018-12-17;2019-01-04;domestic, unspecified bird;domestic;2500;2500;2500;0
+300;official;244961;Influenza - Avian;H5N1 HPAI;19.539743;85.232267;India;Orissa;Nuagaon, Kantabania & Udayagiri;2018-12-17;2019-01-04;domestic, unspecified bird;domestic;5800;4728;4728;1072
+301;official;239383;Influenza - Avian;H5N1 HPAI;11.97;105.67;Cambodia;Kampong Cham;Trorpang Sangker;2018-08-20;2018-08-31;domestic, unspecified bird;domestic;378;318;318;60
+302;official;240233;Influenza - Avian;H7N3 LPAI;37.51;-120.988;United States of America;California;Stanislaus County;2018-09-06;2018-09-12;domestic, turkey;domestic;26258;NA;NA;26258
+303;official;240405;Influenza - Avian;H7N3 LPAI;37.51;-120.988;United States of America;California;Stanislaus County;2018-09-12;2018-09-19;domestic, turkey;domestic;35000;NA;NA;35000
+304;official;240524;Influenza - Avian;H5N8 HPAI;42.2089;24.8764;Bulgaria;Plovdiv;Trilistnik;2018-09-19;2018-09-19;domestic, unspecified bird;domestic;44063;415;415;43648
+305;official;28066;Influenza - Avian;H7N3 LPAI;37.62;-120.969;United States of America;California;Stanislaus County;2018-09-08;2018-09-25;domestic, turkey;domestic;35162;NA;NA;NA
+306;official;241211;Influenza - Avian;H7N3 LPAI;37.62;-120.969;United States of America;California;Stanislaus County;2018-10-04;2018-10-12;domestic, turkey;domestic;33400;NA;NA;NA
+308;official;240709;Influenza - Avian;H5N6 HPAI;25.832;106.665;China;Guizhou Sheng;Xinmin Village;2018-09-07;2018-09-29;domestic, unspecified bird;domestic;37299;5297;4948;32351
+309;official;240868;Influenza - Avian;H5N8 HPAI;42.2047;24.9581;Bulgaria;Plovdiv;Manolsko Konare;2018-10-03;2018-10-05;domestic, chicken, domestic, turkey;domestic;406;98;98;308
+310;official;240989;Influenza - Avian;H5N6 HPAI;27.809;109.392;China;Hunan Sheng;Dutong Village,Chatian Township, Fenghuang County;2018-09-26;2018-10-09;domestic, unspecified bird;domestic;1414;516;385;1029
+311;official;240960;Influenza - Avian;H5N2 HPAI;22.627445;120.525131;Taiwan (Province of China);Taiwan Sheng;Zhutian Township;2018-09-23;2018-10-08;domestic, duck;domestic;NA;60;60;NA
+312;official;243495;Influenza - Avian;H5N2 HPAI;23.663665;120.323365;Taiwan (Province of China);Taiwan Sheng;Yuanchang Township;2018-11-21;2018-12-04;domestic, goose;domestic;1524;146;146;1378
+313;official;241860;Influenza - Avian;H5 LPAI;36.75;127.75;Republic of Korea;Chungchongbuk-do;Cheongju Mihocheon in Chungbuk Province;2018-10-15;2018-10-18;environmental sample, unspecified bird;environmental;0;0;0;0
+314;official;241909;Influenza - Avian;H5N2 LPAI;37.542616;127.462483;Republic of Korea;Kyonggi-do;mouth of the Han River in Paju, Gyeonggi province;2018-10-11;2018-10-18;environmental sample, unspecified bird;environmental;NA;NA;NA;NA
+315;official;243494;Influenza - Avian;H5N2 HPAI;23.719285;120.235539;Taiwan (Province of China);Taiwan Sheng;Taixi Township;2018-11-15;2018-12-04;domestic, duck;domestic;2206;;;2206
+316;official;241859;Influenza - Avian;H5N2 LPAI;35.816667;127.15;Republic of Korea;Chollabuk-do;Mt. Mangyeong River Estuary in Jeonbuk Province;2018-10-10;2018-10-18;environmental sample, unspecified bird;environmental;0;0;0;0
+317;official;241761;Influenza - Avian;H5 HPAI;41.86;25.55;Bulgaria;Haskovo;Voyvodovo;2018-10-17;2018-10-18;domestic, duck;domestic;16000;331;331;15669
+318;official;241765;Influenza - Avian;H5 HPAI;41.86;25.55;Bulgaria;Haskovo;Voyvodovo;2018-10-17;2018-10-18;domestic, chicken;domestic;130000;7387;7387;122613
+319;official;241946;Influenza - Avian;H5N2 LPAI;45.122;-95.049;United States of America;Minnesota;Kandiyohi County;2018-10-19;2018-10-22;domestic, turkey;domestic;40000;NA;NA;NA
+320;official;241947;Influenza - Avian;H5N1 HPAI;15.468588;106.532138;Lao People's Democratic Republic;Xekong;Kandonmai;2018-10-10;2018-10-22;domestic, unspecified bird;domestic;45;28;18;27
+321;official;240718;Influenza - Avian;H5 HPAI;48.3498;40.2975;Russian Federation;Rostovskaya Oblast;Staraya Stanitsa;2018-09-24;2018-10-01;domestic, unspecified bird;domestic;274929;11979;11979;82
+322;official;242015;Influenza - Avian;H5N6 HPAI;30.691;111.246;China;Hubei Sheng;Fanjiahu Village;2018-09-24;2018-10-24;domestic, unspecified bird;domestic;5337;340;340;4997
+323;official;242153;Influenza - Avian;H5N8 HPAI;41.9667;25.4456;Bulgaria;Haskovo;Garvanovo;2018-10-26;2018-10-26;domestic, unspecified bird;domestic;12797;NA;NA;NA
+324;official;242154;Influenza - Avian;H5N8 HPAI;41.86;25.6278;Bulgaria;Haskovo;Malevo;2018-10-26;2018-10-26;domestic, unspecified bird;domestic;1000;NA;NA;NA
+325;official;242198;Influenza - Avian;H5N8 HPAI;42.1019;25.0244;Bulgaria;Plovdiv;Bogdanitsa village;2018-10-29;2018-10-31;domestic, chicken;domestic;39177;4200;4200;34977
+326;official;242199;Influenza - Avian;H5N8 HPAI;42.0453;25.3508;Bulgaria;Haskovo;Varbitsa;2018-10-29;2018-10-31;domestic, duck;domestic;4000;20;NA;3980
+327;official;242333;Influenza - Avian;H5N8 HPAI;41.8558;25.5444;Bulgaria;Haskovo;Voivodovo;2018-10-17;2018-10-31;domestic, unspecified bird;domestic;150;138;138;12
+328;official;242389;Influenza - Avian;H5 HPAI;51.04813;39.95566;Russian Federation;Voronezhskaya Oblast;Bobrovsky;2018-10-31;2018-11-06;domestic, unspecified bird;domestic;342300;122300;122300;82
+329;official;242330;Influenza - Avian;H5N2 LPAI;45.56;-94.163;United States of America;Minnesota;Stearns County;2018-10-30;2018-11-01;domestic, turkey;domestic;34450;NA;NA;NA
+330;official;248299;Influenza - Avian;H5N2 HPAI;31.01;31.32;Egypt;Dakahlia;Ouaish Elhagar;2018-12-31;2019-03-06;domestic, duck;domestic;1000;10;;10
+331;official;245687;Influenza - Avian;H5N2 HPAI;24.113833;120.449778;Taiwan (Province of China);Taiwan Sheng;Lukang Township;2018-12-06;2019-01-21;domestic, chicken;domestic;6958;;;6958
+332;official;242544;Influenza - Avian;H5N2 LPAI;45.554;-94.166;United States of America;Minnesota;Stearns County;2018-10-23;2018-11-08;domestic, turkey;domestic;43000;0;0;0
+333;official;242545;Influenza - Avian;H5N2 LPAI;45.557;-94.162;United States of America;Minnesota;Stearns County;2018-10-31;2018-11-08;domestic, turkey;domestic;24000;0;0;0
+334;official;242546;Influenza - Avian;H5N2 LPAI;45.111;-95.047;United States of America;Minnesota;Kandiyohi County;2018-10-31;2018-11-08;domestic, turkey;domestic;50000;0;0;0
+335;official;242547;Influenza - Avian;H5N2 LPAI;45.553;-94.163;United States of America;Minnesota;Stearns County;2018-11-01;2018-11-08;domestic, turkey;domestic;61000;0;0;0
+336;official;242696;Influenza - Avian;H5N2 LPAI;45.11;-95.041;United States of America;Minnesota;Kandiyohi County;2018-11-12;2018-11-15;domestic, turkey;domestic;89600;NA;NA;NA
+337;official;242729;Influenza - Avian;H5N6 HPAI;25.101;98.587;China;Yunnan Sheng;Dengjiazai Village,Beihai Township, Tengchong City;2018-10-28;2018-11-21;domestic, unspecified bird;domestic;6216;4800;4420;1796
+338;official;242731;Influenza - Avian;H5N6 HPAI;25.558;102.465;China;Yunnan Sheng;Guantian Village,Pingshan Township, Luquan,;2018-11-03;2018-11-21;domestic, unspecified bird;domestic;13884;6540;5400;8484
+339;official;243094;Influenza - Avian;H5N2 LPAI;45.114;-95.036;United States of America;Minnesota;Kandiyohi County;2018-11-13;2018-11-28;domestic, turkey;domestic;40000;NA;NA;NA
+340;official;243121;Influenza - Avian;H5N8 HPAI;-34.2;20.4;South Africa;Western Cape;HPAI_H5N8_2017_195;2018-10-29;2018-11-27;domestic, ostrich;domestic;461;20;20;0
+341;official;243659;Influenza - Avian;H5N6 HPAI;31.439757;120.780204;China;Jiangsu Sheng;Suzhou;2018-10-29;2018-11-23;NA;unspecified;NA;NA;NA;NA
+342;official;243386;Influenza - Avian;H5 LPAI;36.519053;126.846962;Republic of Korea;Chungchongnam-do;Chungnam Province;;2018-12-03;environmental sample, unspecified bird;environmental;;;;
+343;official;243273;Influenza - Avian;H5N8 HPAI;35.70049;52.0575;Iran  (Islamic Republic of);Tehran;Valiran;2018-09-30;2018-12-01;domestic, unspecified bird;domestic;138;10;5;133
+344;official;244064;Influenza - Avian;H5N2 HPAI;23.694838;120.246618;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2018-11-26;2018-12-17;domestic, duck;domestic;3152;NA;NA;3152
+345;official;244063;Influenza - Avian;H5N2 HPAI;23.695853;120.245367;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2018-11-21;2018-12-17;domestic, duck;domestic;1891;NA;NA;1891
+348;official;28949;Influenza - Avian;H5N1 HPAI;19.56816;85.241236;India;Orissa;Alanda and Siala;2018-12-07;2018-12-15;domestic, unspecified bird;domestic;6123;5603;5603;520
+351;official;243942;Influenza - Avian;H5N1 HPAI;19.56816;85.241236;India;Orissa;Budhibara(Sanasahi) and Patharagang;2018-12-07;2018-12-14;domestic, unspecified bird;domestic;6123;5603;5603;520
+353;official;244155;Influenza - Avian;H5 HPAI;44.0969;22.6353;Bulgaria;Vidin;Kosovo;2018-12-17;2018-12-17;domestic,chicken,domestic,pigeon,domestic,common pheasant (phasianus colchicus));domestic;403;NA;NA;NA
+354;official;244551;Influenza - Avian;H5N1 HPAI;19.6275;85.30194444;India;Orissa;Alanda and Siala;2018-12-07;2018-12-15;wild, house crow;wild;NA;120;120;0
+355;official;244806;Influenza - Avian;H5N1 HPAI;19.555775;85.247881;India;Orissa;Malud;2018-12-07;2018-12-28;domestic, unspecified bird;domestic;185;0;0;185
+357;official;244979;Influenza - Avian;H5N1 HPAI;25.59945;85.09889;India;Bihar;Patna (Sanjay Gandhi Zoological Park);2018-12-15;2019-01-07;wild,phasianidae (phasianidae));wild;NA;6;6;NA
+358;official;244811;Influenza - Avian;H5N1 HPAI;25.191151;86.62709;India;Bihar;Goraho;2018-11-15;2018-12-28;domestic, unspecified bird;domestic;705;117;117;588
+359;official;244978;Influenza - Avian;H5N1 HPAI;25.3652;86.4922;India;Bihar;Mubarakchak;2018-12-15;2019-01-07;wild, crow;wild;NA;40;40;NA
+360;official;248643;Influenza - Avian;H5N6 HPAI;15.4813;108.367;Viet Nam;Quang Nam;Tien Tho;2019-02-11;2019-03-11;domestic, duck;domestic;3800;1350;;3800
+361;official;245154;Influenza - Avian;H5N2 HPAI;23.652518;120.255147;Taiwan (Province of China);Taiwan Sheng;Sihu Township;2018-12-27;2019-01-04;domestic, turkey;domestic;1413;424;424;989
+362;official;244804;Influenza - Avian;H5N1 HPAI;12.6419;108.3358;Viet Nam;Dak Lak;Tan Tien;2018-12-21;2018-12-27;domestic, unspecified bird;domestic;215;100;50;165
+366;official;245152;Influenza - Avian;H5N8 HPAI;36.60364;52.74197;Iran  (Islamic Republic of);Mazandaran;Bala Langor;2018-12-24;2019-01-05;domestic, duck;domestic;1400;1000;400;1000
+367;official;244553;Influenza - Avian;H5N6 HPAI;21.3228;107.5137;Viet Nam;Quang Ninh;Lang Nhoi village, Dong Hai commune;2018-12-10;2018-12-21;domestic, unspecified bird;domestic;1173;750;750;423
+371;official;245197;Influenza - Avian;H5 HPAI;47.508678;40.526786;Russian Federation;Rostovskaya Oblast;Ursdon;2019-01-04;2019-01-11;domestic, turkey;domestic;17211;6355;6355;NA
+372;official;245718;Influenza - Avian;H5N2 LPAI;19.8206;-70.93546;Dominican Republic;Puerto Plata;Puerto Plata;2018-11-02;2019-01-24;domestic, unspecified bird;domestic;1126;773;745;217
+373;official;246066;Influenza - Avian;H5N2 HPAI;24.91308;121.013272;Taiwan (Province of China);Taiwan Sheng;Xinfeng Township;2019-01-23;2019-01-28;domestic, chicken;domestic;100;100;100;NA
+374;official;245807;Influenza - Avian;H5N8 HPAI;-33.2;19.1;South Africa;Western Cape;HPAI_H5N8_2017_197;2018-08-13;2019-01-28;domestic, ostrich;domestic;3634;25;7;NA
+375;official;245808;Influenza - Avian;H5N8 HPAI;-33.5;22.4;South Africa;Western Cape;HPAI_H5N8_2017_200;2018-09-26;2019-01-28;domestic, ostrich;domestic;1897;111;111;NA
+376;official;245809;Influenza - Avian;H5N8 HPAI;-34.2;21;South Africa;Western Cape;HPAI_H5N8_2017_198;2018-09-27;2019-01-28;domestic, ostrich;domestic;500;10;10;NA
+377;official;245810;Influenza - Avian;H5N8 HPAI;-34.2;20.7;South Africa;Western Cape;HPAI_H5N8_2017_199;2018-11-19;2019-01-28;domestic, ostrich;domestic;390;6;5;NA
+378;official;245811;Influenza - Avian;H5N8 HPAI;-34.2;18.4;South Africa;Western Cape;HPAI_H5N8_2017_201;2018-11-20;2019-01-28;domestic, ostrich;domestic;112;7;NA;NA
+379;official;245812;Influenza - Avian;H5N8 HPAI;10.3346;9.8584;Nigeria;Bauchi;Fadaman Mada;2019-01-10;2019-01-28;domestic, chicken;domestic;2000;75;8;1992
+380;official;246208;Influenza - Avian;H5N8 HPAI;-26.65;15.08;Namibia;Karas;Halifax Island;2019-01-27;2019-02-12;wild, jackass penguin spheniscus demersus;wild;7000;223;217;6
+381;official;246251;Influenza - Avian;H5N8 HPAI;29.311193;47.951374;Kuwait;Al Farwaniyah;Al Rai Live Bird Market;2019-01-24;2019-02-05;domestic, unspecified bird;domestic;2000;3;3;1997
+382;official;247632;Influenza - Avian;H5N1 HPAI;23.8081;85.8233;India;Jharkhand;Gomia;2019-01-28;2019-02-22;wild, crow;wild;NA;25;25;0
+383;official;247631;Influenza - Avian;H5N1 HPAI;24.8255;87.2135;India;Jharkhand;DC Campus, Godda;2019-01-28;2019-02-22;wild, crow;wild;NA;12;12;0
+384;official;247662;Influenza - Avian;H5N1 HPAI;25.180833;87.349167;India;Jharkhand;Fajilkhutahari;2019-01-25;2019-02-16;domestic, unspecified bird;domestic;4849;26;26;4823
+385;official;247852;Influenza - Avian;H5N2 HPAI;23.852358;120.289689;Taiwan (Province of China);Taiwan Sheng;Dacheng;2019-02-13;2019-02-26;domestic, chicken;domestic;34990;2450;2450;32540
+386;official;247389;Influenza - Avian;H5N8 HPAI;9.81123;8.903228;Nigeria;Plateau;Bukuru;2019-02-11;2019-02-15;domestic, chicken;domestic;1040;60;60;980
+387;official;247388;Influenza - Avian;H5N8 HPAI;9.86002;8.82131;Nigeria;Plateau;Rantya;2019-02-07;2019-02-15;domestic, chicken;domestic;2900;11;11;2889
+388;official;247391;Influenza - Avian;H5N8 HPAI;-34;21.6;South Africa;Western Cape;HPAI_H5N8_2017_203;2019-01-08;2019-02-18;domestic, ostrich;domestic;2711;18;6;NA
+389;official;247390;Influenza - Avian;H5N8 HPAI;-33.5;21.6;South Africa;Western Cape;HPAI_H5N8_2017_202;2018-12-07;2019-02-18;domestic, ostrich;domestic;3348;168;168;NA
+390;official;247951;Influenza - Avian;H5N6 HPAI;26.64138;101.39805;China;Yunnan Sheng;Xingquan town community;2019-02-13;2019-02-27;domestic, unspecified bird;domestic;56380;463;463;55917
+391;official;247630;Influenza - Avian;H5N1 HPAI;25.216151;84.996358;India;Bihar;Collector Office Campus, Jehanabad;2019-02-01;2019-02-21;wild, crow;wild;NA;18;18;0
+392;official;247766;Influenza - Avian;H5N8 HPAI;10.0215;8.9666;Nigeria;Bauchi;Sabon Garin Narayi;2019-01-28;2019-02-27;domestic, chicken;domestic;460;200;105;335
+393;official;247749;Influenza - Avian;H5N8 HPAI;33.688928;72.987924;Pakistan;Islamabad;F 11/3;2019-01-02;2019-02-26;wild, mallard, wild, anatidae, wild, swan;wild;68;63;63;5
+394;official;247750;Influenza - Avian;H5N8 HPAI;33.720231;73.108652;Pakistan;Islamabad;Diplomatic Enclave;2019-01-07;2019-02-26;wild, crow;wild;NA;1;1;NA
+395;official;247850;Influenza - Avian;H5N2 HPAI;23.688737;120.267855;Taiwan (Province of China);Taiwan Sheng;Dongshi;2019-01-26;2019-02-26;domestic, chicken;domestic;12713;1609;1609;11104
+396;official;247851;Influenza - Avian;H5N2 HPAI;23.591721;120.254411;Taiwan (Province of China);Taiwan Sheng;Shuilin;2019-01-30;2019-02-26;domestic, turkey;domestic;1005;141;141;864
+397;official;247853;Influenza - Avian;H5N2 HPAI;23.707283;120.40456;Taiwan (Province of China);Taiwan Sheng;Huwei;2019-02-19;2019-02-26;domestic, chicken;domestic;16788;60;60;16728
+398;official;254578;Influenza - Avian;H5N8 HPAI;-26.65;15.08;Namibia;Karas;Halifax Island;2019-02-20;2019-06-20;wild, jackass penguin spheniscus demersus;wild;NA;174;174;0
+399;official;248311;Influenza - Avian;H5 LPAI;56.8177;10.0358;Denmark;Nordjylland;Terndrup;2019-02-26;2019-03-01;domestic, chicken;domestic;7000;NA;NA;7000
+766;official;248811;Influenza - Avian;H5 HPAI;43.18;24.67;Bulgaria;Lovech;Lisets;2019-03-13;2019-03-13;domestic, unspecified bird;domestic;3200;20;0;NA
+767;official;248984;Influenza - Avian;H5N2 HPAI;23.739512;120.239687;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-02-25;2019-03-12;domestic, chicken;domestic;18903;52;52;18851
+768;official;248985;Influenza - Avian;H5N2 HPAI;23.85947;120.29204;Taiwan (Province of China);Taiwan Sheng;Dacheng Township;2019-03-04;2019-03-12;domestic, chicken;domestic;34200;800;800;33400
+769;official;248872;Influenza - Avian;H5N8 HPAI;-29.7613;25.759473;South Africa;Free State;Letsemeng;2019-02-01;2019-03-14;domestic, ostrich;domestic;4372;75;NA;1
+770;official;249045;Influenza - Avian;H5N1 HPAI;27.396939;85.063117;Nepal;Central;Hetauda Submetropolitan;2019-02-14;2019-03-17;domestic, unspecified bird;domestic;50894;9769;9769;41125
+771;official;249487;Influenza - Avian;H5N1 HPAI;27.771416;85.318687;Nepal;Central;Tarkeshwor;2019-03-07;2019-03-24;domestic, chicken;domestic;30673;2125;2125;28548
+772;official;249048;Influenza - Avian;H7 LPAI;55.5119;9.9781;Denmark;Fyn;Brenderup;2019-03-12;2019-03-15;domestic, duck;domestic;3300;NA;NA;3300
+773;official;249046;Influenza - Avian;H5N1 HPAI;27.769718;85.317463;Nepal;Central;Tarkeshwor-1;2019-02-28;2019-03-17;domestic, unspecified bird;domestic;5852;2600;2600;3252
+775;official;249486;Influenza - Avian;H5N1 HPAI;27.762222;85.321944;Nepal;Central;Tokha;2019-03-07;2019-03-24;domestic, chicken;domestic;2220;370;370;1850
+778;official;249498;Influenza - Avian;H7N9 HPAI;41.14476;121.13994;China;Liaoning Sheng;Jinzhou City zoo;2019-03-17;2019-03-25;domestic,indian peafowl (pavo cristatus));domestic;394;9;9;191
+780;official;249488;Influenza - Avian;H5N1 HPAI;28.2553;84.10056;Nepal;Western;Madi ward-3;2019-03-07;2019-03-24;domestic, chicken;domestic;100;23;23;77
+781;official;249485;Influenza - Avian;H5N8 HPAI;30.51158;47.53062;Iraq;Basrah;Basrah market;2019-03-17;2019-03-24;domestic, unspecified bird;domestic;5000;5000;2000;3000
+782;official;249353;Influenza - Avian;H7N3 LPAI;11.569583;104.921028;Cambodia;Phnom Penh;Phnom Penh;2018-11-20;2019-02-15;environmental sample, unspecified bird;environmental;NA;1;NA;NA
+783;official;249356;Influenza - Avian;H7N9 LPAI;11.48682;105.32533;Cambodia;Prey Veng;Prey Veng;2018-11-21;2019-02-15;environmental sample, unspecified bird;environmental;NA;NA;NA;NA
+784;official;249357;Influenza - Avian;H7N7 LPAI;11.48682;105.32533;Cambodia;Prey Veng;Prey Veng;2018-11-27;2019-02-15;environmental sample, unspecified bird;environmental;NA;NA;NA;NA
+785;official;250293;Influenza - Avian;H5N1 HPAI;20.443063;85.401419;India;Orissa;Govt. Duck Breeding Farm;2019-03-23;2019-04-04;domestic, duck;domestic;924;235;235;689
+786;official;250118;Influenza - Avian;H5N1 HPAI;42.13527;122.79055;China;Liaoning Sheng;Xinmin City;NA;2019-03-31;domestic, unspecified bird;domestic;25472;1000;1000;24472
+787;official;250045;Influenza - Avian;H5N1 HPAI;26.65018889;87.35805556;Nepal;Eastern;Sunder Haraicha;2019-03-18;2019-04-01;domestic, chicken;domestic;3031;1092;1092;1939
+788;official;250046;Influenza - Avian;H5N1 HPAI;26.70138889;87.22805556;Nepal;Eastern;Itahari-11;2019-03-21;2019-04-01;domestic, chicken;domestic;2947;2100;2100;847
+789;official;250054;Influenza - Avian;H5N2 HPAI;25.117318;121.474572;Taiwan (Province of China);Taiwan Sheng;Beitou District;2019-03-20;2019-04-01;wild, grey heron;wild;NA;1;1;NA
+790;official;250055;Influenza - Avian;H5N2 HPAI;25.117318;121.474572;Taiwan (Province of China);Taiwan Sheng;Beitou District;2019-03-16;2019-03-29;domestic, chicken;domestic;39;39;39;NA
+791;official;250056;Influenza - Avian;H5N2 HPAI;25.03067;121.48937;Taiwan (Province of China);Taiwan Sheng;Wanhua District;2019-03-20;2019-03-29;domestic, chicken;domestic;61;NA;NA;61
+792;official;250057;Influenza - Avian;H5N2 HPAI;25.117318;121.474572;Taiwan (Province of China);Taiwan Sheng;Beitou District;2019-03-20;2019-03-29;domestic, chicken;domestic;5;5;5;NA
+793;official;250058;Influenza - Avian;H5N2 HPAI;25.117318;121.474572;Taiwan (Province of China);Taiwan Sheng;Beitou District;2019-03-22;2019-03-29;domestic, chicken;domestic;3;3;3;NA
+794;official;250205;Influenza - Avian;H7N3 HPAI;19.650621;-98.880518;Mexico;Mexico;Acolman;2019-03-06;2019-04-01;domestic, chicken;domestic;150;150;150;NA
+795;official;250202;Influenza - Avian;H5 HPAI;43.0747;24.0764;Bulgaria;Lovech;Lovech;2019-04-02;2019-04-03;domestic, unspecified bird;domestic;1400;20;0;1400
+796;official;250235;Influenza - Avian;H5N1 HPAI;27.643333;85.401388;Nepal;Central;Suryabinayak municipality-1;2019-03-29;2019-04-04;domestic, chicken;domestic;3200;215;215;2985
+797;official;249548;Influenza - Avian;H5N1 HPAI;27.718573;85.317751;Nepal;Central;Lainchaur;2019-03-17;2019-03-26;wild, crow;wild;NA;200;200;NA
+798;official;251274;Influenza - Avian;H5N1 HPAI;26.8382;89.1136;Bhutan;Samtse;Dhamdara;2019-04-06;2019-04-11;domestic, unspecified bird;domestic;2000;264;264;1095
+799;official;250626;Influenza - Avian;H5N8 HPAI;42.0494;24.9058;Bulgaria;Plovdiv;Asenovgrad;2019-04-08;2019-04-08;domestic, chicken;domestic;168752;300;300;168452
+800;official;250532;Influenza - Avian;H5N8 HPAI;42.0925;24.815;Bulgaria;Plovdiv;Krumovo;2019-04-03;2019-04-05;domestic, chicken;domestic;37;37;37;0
+801;official;250531;Influenza - Avian;H5N8 HPAI;42.0494;24.9058;Bulgaria;Plovdiv;Asenovgrad;2019-04-03;2019-04-05;domestic, chicken;domestic;34998;298;298;34700
+802;official;251396;Influenza - Avian;H5N2 HPAI;23.683875;120.263218;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-03-21;2019-04-08;domestic, duck;domestic;6260;NA;NA;6260
+803;official;251397;Influenza - Avian;H5N2 HPAI;23.683074;120.263209;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-03-21;2019-04-08;domestic, duck;domestic;4738;NA;NA;NA
+804;official;251431;Influenza - Avian;H5N8 HPAI;35.20394;51.71101;Iran  (Islamic Republic of);Tehran;hesar beyg;2019-04-08;2019-04-13;domestic, unspecified bird;domestic;10000;10000;4000;6000
+805;official;251432;Influenza - Avian;H5N8 HPAI;37.944969;46.012833;Iran  (Islamic Republic of);East Azarbayejan;badihe aghdam;2019-04-08;2019-04-13;domestic, unspecified bird;domestic;65000;65000;278;64722
+806;official;251434;Influenza - Avian;H5N8 HPAI;6.5898;5.8414;Nigeria;Edo;Benin City;2019-04-05;2019-04-15;domestic, chicken;domestic;1500;250;250;1250
+807;official;251430;Influenza - Avian;H5N1 HPAI;27.623224;85.359019;Nepal;Central;Godabari-1;2019-04-12;2019-04-13;domestic, chicken;domestic;1000;123;123;877
+808;official;251626;Influenza - Avian;H5N6 HPAI;10.98066;104.7799;Cambodia;Takeo;Daunkeo market;2019-03-25;2019-04-18;domestic, unspecified bird;domestic;100;10;NA;90
+809;official;251549;Influenza - Avian;H5 HPAI;23.028841;89.399236;Bangladesh;Khulna;Noapara;2018-12-15;2019-04-17;wild, crow;wild;NA;31;31;NA
+810;official;251544;Influenza - Avian;H7N3 HPAI;19.878863;-99.554658;Mexico;Mexico;Chapa de Mota;2019-04-09;2019-04-16;domestic, unspecified bird;domestic;290;290;230;60
+811;official;251543;Influenza - Avian;H7N3 HPAI;21.377253;-101.929069;Mexico;Jalisco;Lagos de Moreno;2019-04-09;2019-04-16;domestic, unspecified bird;domestic;612;612;120;429
+812;official;251542;Influenza - Avian;H7N3 HPAI;21.375311;-101.935152;Mexico;Jalisco;Lagos de Moreno;2019-04-09;2019-04-16;domestic, chicken;domestic;1625;1625;400;1225
+813;official;251399;Influenza - Avian;H5N2 HPAI;25.117318;121.474572;Taiwan (Province of China);Taiwan Sheng;Beitou District;2019-03-25;2019-04-08;domestic, chicken;domestic;3;3;3;NA
+814;official;251400;Influenza - Avian;H5N2 HPAI;23.735578;120.241605;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-03-26;2019-04-08;domestic, chicken;domestic;12585;241;241;12344
+815;official;251548;Influenza - Avian;H5N2 HPAI;25.03067;121.48937;Taiwan (Province of China);Taiwan Sheng;Wanhua District;2019-03-26;2019-04-16;domestic, chicken;domestic;77;4;NA;77
+816;official;251401;Influenza - Avian;H5N2 HPAI;25.03067;121.48937;Taiwan (Province of China);Taiwan Sheng;Wanhua District;2019-03-29;2019-04-08;domestic, chicken;domestic;8;1;NA;8
+817;official;251947;Influenza - Avian;H5 LPAI;36.378;-121.656;United States of America;California;Monterey County;2019-04-15;2019-04-24;domestic, duck;domestic;9476;0;0;0
+818;official;252039;Influenza - Avian;H5N8 HPAI;32.478083;35.418018;Israel;Northern;MA''ALE GILBOA;2019-04-20;2019-04-25;domestic, turkey;domestic;13500;350;200;13300
+819;official;251903;Influenza - Avian;H5N2 LPAI;19.37903;-70.55098;Dominican Republic;Espaillat;Espaillat;2018-12-30;2019-04-22;domestic, chicken;domestic;1800;30;0;0
+820;official;251904;Influenza - Avian;H5N2 LPAI;19.39742;-70.505116;Dominican Republic;Espaillat;Espaillat;2019-01-08;2019-04-22;domestic, unspecified bird;domestic;56685;2350;2350;0
+821;official;251905;Influenza - Avian;H5N2 LPAI;19.37906;-70.54887;Dominican Republic;Espaillat;Espaillat;2019-01-09;2019-04-22;domestic, chicken;domestic;3000;0;0;0
+822;official;251906;Influenza - Avian;H5N2 LPAI;19.40182;-70.508422;Dominican Republic;Espaillat;Espaillat;2019-01-10;2019-04-22;domestic, chicken;domestic;45000;535;530;0
+823;official;251907;Influenza - Avian;H5N2 LPAI;19.360898;-70.5173;Dominican Republic;Espaillat;Espaillat;2019-01-14;2019-04-22;domestic, chicken;domestic;13000;0;0;0
+824;official;251908;Influenza - Avian;H5N2 LPAI;19.42478;-70.49296;Dominican Republic;Espaillat;Espaillat;2019-01-21;2019-04-22;domestic, unspecified bird;domestic;59097;0;0;0
+825;official;251909;Influenza - Avian;H5N2 LPAI;19.40207;-70.56506;Dominican Republic;Espaillat;Espaillat;2019-01-22;2019-04-22;domestic, unspecified bird;domestic;19;12;7;0
+827;official;252106;Influenza - Avian;H5N1 HPAI;27.74111111;85.41666667;Nepal;Central;Kageshwori;2019-04-23;2019-04-29;domestic, duck;domestic;500;190;190;310
+828;official;252037;Influenza - Avian;H5N2 HPAI;23.8743;120.4437;Taiwan (Province of China);Taiwan Sheng;Pitou Township;2019-04-08;2019-04-26;domestic, chicken;domestic;720;43;43;677
+829;official;252038;Influenza - Avian;H5N2 HPAI;23.692255;120.258276;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-04-12;2019-04-26;domestic, chicken;domestic;22879;79;79;22800
+830;official;252225;Influenza - Avian;H7N3 HPAI;20.676714;-99.987875;Mexico;Queretaro;Colon;2019-04-08;2019-04-26;domestic, unspecified bird;domestic;138632;5;0;138632
+831;official;252226;Influenza - Avian;H7N3 HPAI;20.21594;-98.76137;Mexico;Hidalgo;Mineral del Chico;2019-04-15;2019-04-26;domestic, unspecified bird;domestic;598;178;172;0
+832;official;254589;Influenza - Avian;H5N8 HPAI;-26.288038;14.956528;Namibia;Karas;Ichaboe Island;2019-02-20;2019-06-20;wild, jackass penguin spheniscus demersus;wild;NA;45;45;0
+833;official;254590;Influenza - Avian;H5N8 HPAI;-25.72004;14.83295;Namibia;Karas;Mercury Island;2019-06-20;2019-06-20;wild, jackass penguin spheniscus demersus;wild;NA;19;19;0
+834;official;252684;Influenza - Avian;H5N1 HPAI;27.559229;84.04133;Nepal;Western;Madhyabidu municipality-2;2019-05-02;2019-05-05;domestic, unspecified bird;domestic;271;25;25;246
+835;official;254508;Influenza - Avian;H3N1 LPAI;51.041955;3.006225;Belgium;Vlaams Gewest;West-Vlaanderen;2019-01-31;2019-04-06;domestic, chicken;domestic;NA;NA;NA;NA
+836;official;254509;Influenza - Avian;H3 LPAI;51.041955;3.006225;Belgium;Vlaams Gewest;West-Vlaanderen;2019-01-31;2019-06-14;domestic, chicken;domestic;NA;NA;NA;NA
+837;official;254510;Influenza - Avian;H3 LPAI;51.013206;3.834678;Belgium;Vlaams Gewest;Oost-Vlaanderen;2019-01-31;2019-06-14;domestic, chicken;domestic;NA;NA;NA;NA
+838;official;254511;Influenza - Avian;H3 LPAI;51.247127;4.689417;Belgium;Vlaams Gewest;Antwerpen;2019-01-31;2019-06-14;domestic, chicken;domestic;NA;NA;NA;NA
+839;official;254512;Influenza - Avian;H3 LPAI;50.475605;5.77263;Belgium;Region wallonne;Liege;2019-01-31;2019-06-14;domestic, chicken;domestic;NA;NA;NA;NA
+840;official;254513;Influenza - Avian;H3 LPAI;49.963279;5.438261;Belgium;Region wallonne;Luxembourg;2019-01-31;2019-06-14;domestic, chicken;domestic;NA;NA;NA;NA
+841;official;253261;Influenza - Avian;H5N1 HPAI;9.8088;105.8023;Viet Nam;Hau Giang;Lai Hieu;2019-05-04;2019-05-20;domestic, unspecified bird;domestic;1120;NA;NA;1120
+842;official;253426;Influenza - Avian;NA;9.8088;105.8023;Viet Nam;Hau Giang;Lai Hieu;2019-05-04;2019-05-20;domestic, unspecified bird;domestic;1120;0;0;1120
+843;official;253408;Influenza - Avian;H7N3 HPAI;20.066601;-100.07374;Mexico;Queretaro;Colón;2019-04-24;2019-05-17;domestic, unspecified bird;domestic;1;1;0;1
+844;official;253409;Influenza - Avian;H7N3 HPAI;20.65652;-99.96347;Mexico;Queretaro;Ezequiel Montes;2019-04-29;2019-05-17;domestic, unspecified bird;domestic;62;50;42;20
+845;official;253410;Influenza - Avian;H7N3 HPAI;17.928;-99.9;Mexico;Guerrero;General Heliodoro Castillo;2019-04-30;2019-05-17;domestic, unspecified bird;domestic;34;24;19;15
+846;official;253411;Influenza - Avian;H7N3 HPAI;19.555278;-98.024444;Mexico;Tlaxcala;Tlaxco;2019-04-30;2019-05-17;domestic, unspecified bird;domestic;10;5;5;5
+847;official;253412;Influenza - Avian;H7N3 HPAI;20.5267;-100.08585;Mexico;Queretaro;Pedro Escobedo;2019-05-07;2019-05-17;domestic, unspecified bird;domestic;2000;1400;1200;0
+848;official;253618;Influenza - Avian;H5N2 HPAI;22.436139;120.556583;Taiwan (Province of China);Taiwan Sheng;Jiadong Township;2019-05-14;2019-05-24;domestic, duck;domestic;4193;40;40;4153
+849;official;253619;Influenza - Avian;H5N2 HPAI;23.849417;120.372667;Taiwan (Province of China);Taiwan Sheng;Zhutang Township;2019-05-17;2019-05-24;domestic, chicken;domestic;3944;2136;2136;1808
+850;official;253789;Influenza - Avian;H5N2 HPAI;23.740892;120.240172;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-05-16;2019-05-29;domestic, duck;domestic;1653;0;0;1653
+851;official;253790;Influenza - Avian;H5N2 HPAI;23.716737;120.237712;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-05-20;2019-05-29;domestic, chicken;domestic;18397;745;745;17652
+852;official;253791;Influenza - Avian;H5N2 HPAI;23.60533;120.19777;Taiwan (Province of China);Taiwan Sheng;Kouhu Township;2019-05-24;2019-05-29;domestic, chicken;domestic;14642;639;639;14003
+853;official;253757;Influenza - Avian;H5N8 HPAI;6.6212;5.8581;Nigeria;Edo;Oba Area;2019-04-21;2019-05-28;domestic, unspecified bird;domestic;NA;20;NA;NA
+854;official;253812;Influenza - Avian;H5N6 HPAI;44.24747;80.6674;China;Xinjiang Uygur Zizhiqu;Liushuqu Village;2019-05-24;2019-06-01;domestic, unspecified bird;domestic;11910;1503;1015;10895
+855;official;254080;Influenza - Avian;H7N3 HPAI;17.924;-99.898;Mexico;Guerrero;General Heliodoro Castillo;2019-05-08;2019-06-04;domestic, unspecified bird;domestic;54;14;10;0
+856;official;254081;Influenza - Avian;H7N3 HPAI;20.68267;-99.81036;Mexico;Queretaro;Cadereyta de Montes;2019-05-14;2019-06-04;domestic, unspecified bird;domestic;25;5;0;25
+857;official;254082;Influenza - Avian;H7N3 HPAI;19.8281;-98.9606;Mexico;Hidalgo;Tizayuca;2019-05-14;2019-06-04;domestic, unspecified bird;domestic;1300;1200;1150;150
+858;official;254083;Influenza - Avian;H7N3 HPAI;20.425778;-100.06;Mexico;Queretaro;San Juan del Río;2019-05-20;2019-06-04;domestic, unspecified bird;domestic;133566;5;0;133566
+859;official;253832;Influenza - Avian;H5N8 HPAI;-32.8;23.9;South Africa;Eastern Cape;HPAI_H5N8_2017_205;2019-04-15;2019-06-04;domestic, ostrich;domestic;709;22;NA;NA
+860;official;254546;Influenza - Avian;H5N2 HPAI;23.637128;120.195954;Taiwan (Province of China);Taiwan Sheng;Sihu Township;2019-05-27;2019-06-18;domestic, goose;domestic;3;3;3;0
+861;official;254547;Influenza - Avian;H5N2 HPAI;25.03067;121.48937;Taiwan (Province of China);Taiwan Sheng;Wanhua District;2019-05-31;2019-06-18;domestic, chicken;domestic;26;2;0;26
+862;official;254548;Influenza - Avian;H5N2 HPAI;23.668553;120.240054;Taiwan (Province of China);Taiwan Sheng;Dongshi Township;2019-06-08;2019-06-18;domestic, chicken;domestic;12476;591;591;11885
+863;official;254656;Influenza - Avian;H5N2 HPAI;23.990492;120.378555;Taiwan (Province of China);Taiwan Sheng;Fangyuan Township;2019-06-18;2019-06-25;domestic, chicken;domestic;29030;1070;1070;27960
+884;official;244805;Influenza - Avian;H5N1 HPAI;19.49888;85.193611;India;Orissa;Brahmandeo;2018-12-07;2018-12-28;domestic, unspecified bird;domestic;10627;40;40;10587
+885;official;246689;Influenza - Avian;H7N7 LPAI;37.75;128.9;Republic of Korea;Kang-won-do;Namdaecheon, Gangneung City, Gangwon-do on;2019-01-07;2019-01-09;environmental sample, unspecified bird;environmental;NA;NA;NA;NA
+886;official;244709;Influenza - Avian;H5N8 HPAI;42.4161;26.9308;Bulgaria;Jambol;Pravdino;2018-11-22;2018-12-23;domestic, unspecified bird;domestic;50;50;33;17
+887;official;246781;Influenza - Avian;H5N8 HPAI;-26.65;15.16;Namibia;Karas;Luderitz Marine ResearchQuarantine Centre;2019-01-27;2019-02-12;wild, jackass penguin spheniscus demersus;wild;2;2;0;2
+888;official;245153;Influenza - Avian;H5N8 HPAI;36.4979;52.1864;Iran  (Islamic Republic of);Mazandaran;Nor joje;2018-12-25;2019-01-05;domestic, chicken;domestic;35660;35260;394;35266
+889;official;244786;Influenza - Avian;H5N2 HPAI;23.40009;120.50564;Taiwan (Province of China);Taiwan Sheng;Zhongpu Township;2018-12-18;2018-12-25;domestic, unspecified bird;domestic;16;16;16;0
+890;official;244785;Influenza - Avian;H5N2 HPAI;24.9038;121.1943;Taiwan (Province of China);Taiwan Sheng;Pingzhen District;2018-12-17;2018-12-25;domestic, unspecified bird;domestic;1202;33;33;1169
+891;official;238468;Influenza - Avian;H5N8 HPAI;23.402081;45.23404;Saudi Arabia;Riyad;Alazizia live bird market;2018-07-17;2018-07-17;domestic, ducks;domestic;14675;1;0;14675
+u1;unofficial;NA;Influenza - Avian;H5N6;;;Viet Nam; Quang Ninh;NA;2019-01-08;2019-01-09;domestic, fowls;domestic;NA;NA;NA;NA
+u30;unofficial;NA;Influenza - Avian;H5N6;;;Viet Nam; Quang Ninh;Hai Ha;2019-01-06;2019-01-09;domestic, chicken;domestic;3000;NA;NA;NA
+u10;unofficial;NA;Influenza - Avian;H7N2 LPAI;;;United States of America;NA;NA;NA;2018-11-05;domestic, cat;mammal;NA;NA;NA;NA
+u12;unofficial;NA;Influenza - Avian;H5N1 HPAI;;;Viet Nam;Kiên Giang;Binh Son commune ;NA;2018-12-11;domestic, chicken;domestic;NA;NA;NA;NA
+u20;unofficial;NA;Influenza - Avian;H5N1 HPAI;;;Viet Nam;Kiên Giang;Son soc town ;NA;2018-12-11;domestic, chicken;domestic;NA;NA;NA;NA
+u13;unofficial;NA;Influenza - Avian;;;;United States of America;NA;NA;NA;2018-12-14;domestic, chicken;domestic;NA;NA;NA;NA
+u16;unofficial;NA;Influenza - Avian;H5N1;;;India;Bihar;Patna, Walipur, Nawada;NA;2019-01-02;wild, crow;wild;;NA;12;NA
+u19;unofficial;NA;Influenza - Avian;;;;India;Bihar;College of Arts and Crafts at Patna;2019-01-01;;wild, crow;wild;;;8;
+u2;unofficial;NA;Influenza - Avian;H5N1;;;India;Bihar;Munger, Asarganj block;2019-12-21;;wild, unspecified;wild;;;;
+u17;unofficial;NA;Influenza - Avian;;;;India;Bihar;Muzaffarpur;NA;2019-01-06;wild, crow;wild;NA;NA;12;NA
+u18;unofficial;NA;Influenza - Avian;;;;India;Bihar;Babusa village under Dhoraiya block in Banka district ;NA;2019-01-13;domestic, unspecified;domestic;NA;NA;NA;NA
+u21;unofficial;NA;Influenza - Avian;;;;India;Bihar;Kendrapara district, Mahakalapara;NA;2019-03-05;wild, crow;wild;NA;NA;8;NA
+u22;unofficial;NA;Influenza - Avian;;;;Namibia;Karas;Luderitz Marine ResearchQuarantine Centre;NA;2019-03-11;wild, pinguins;wild;27;NA;NA;NA
+u23;unofficial;NA;Influenza - Avian;;;;India;Jharkhand;Santhal Pargana division;NA;2019-03-19;wild, pigeon;wild;NA;NA;NA;NA
+u24;unofficial;NA;Influenza - Avian;;;;Pakistan;NA;Islamabad Zoo;NA;2019-03-19;domestic, birds an ostrich;wild;NA;NA;48;NA
+u25;unofficial;NA;Influenza - Avian;;;;Nepal;Central;Kaski, Chitwan and Makawanpur;NA;2019-03-22;unspecified bird;unspecified;NA;NA;NA;NA
+u26;unofficial;NA;Influenza - Avian;;;;United States of America;Utah;Willard;NA;2019-03-25;domestic, unspecified;domestic;NA;NA;NA;NA
+u27;unofficial;NA;Influenza - Avian;H5N6;;;Viet Nam;Lang Son;Trang Dinh;NA;2019-04-28;domestic, fowls;domestic;NA;NA;NA;NA
+u3;unofficial;NA;Influenza - Avian;H5N1;;;Viet Nam;Long An;Long Son commune;NA;2019-01-07;domestic, ducks and chickens;domestic;NA;NA;NA;NA
+u6;unofficial;NA;Influenza - Avian;NA;;;United States of America;NA;NA;NA;2018-08-23;wild, seal;mammal;NA;NA;NA;NA
+u7;unofficial;NA;Influenza - Avian;NA;;;Viet Nam;Quang Ninh;Tien Yen;NA;2019-01-07;domestic, chicken;domestic;NA;NA;NA;NA
+u8;unofficial;NA;Influenza - Avian;NA;;;China;NA;NA;NA;2018-09-27;domestic, duck;domestic;NA;NA;NA;NA
+u9;unofficial;NA;Influenza - Avian;NA;;;India;Bengaluru;Kasavanahalli Lake in Bellandur;NA;2018-11-05;wild, common coot;wild;NA;NA;NA;NA
+u11;unofficial;;Influenza - Avian;;;;India;Bihar;Patna, Bikram;;2019-01-04;domestic, chicken;domestic;;;100;
+u14;unofficial;;Influenza - Avian;;;;India;Bihar;Patna, Andhra Chowki;;;domestic, hens;domestic;;;3000;
+u15;unofficial;;Influenza - Avian;;;;India;Bihar;Patna, Masaurih block;;2019-01-05;wild, crow;wild;;;12;
+u31;unofficial;;Influenza - Avian;;;;India;Bihar;Gaya, Sherghati;;2019-01-05;domestic, hens;domestic;;;12;
+u32;unofficial;;Influenza - Avian;;;;India;Bihar;Patna, Digha, at Raghunathpur in Siwan ;2019-01-06;;wild, crow;wild;;;10;
+u33;unofficial;;Influenza - Avian;;;;India;Bihar;Patna, Digha, Chandanpatti, Muzaffarpur districts;2019-01-06;;wild, crow;wild;;;12;
+u34;unofficial;;Influenza - Avian;;;;India;Bihar;Patna B N College, SP office ;2019-01-15;;wild, crow;wild;;;;
+u35;unofficial;;Influenza - Avian;;;;India;Bihar;Muger, Mubarakchak ;;2019-01-04;domestic, chicken;domestic;;;;2000

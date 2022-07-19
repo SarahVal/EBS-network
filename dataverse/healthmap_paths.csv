@@ -1,0 +1,248 @@
+id;id_path;source_1;source_2;id_from_source_1;date_edge
+1;1;HealthMap;Focus Taiwan;6533444;2019-06-22
+2;1;Focus Taiwan;Taiwan Vet Auth;6533444;2019-06-22
+4;2;HealthMap;The Himalayan Times;6496096;2019-05-31
+5;3;HealthMap;Xinhua;6430421;2019-04-19
+6;3;Xinhua;OIE;6430421;2019-04-19
+7;3;OIE;Cambodia Vet Auth;6430421;2019-04-18
+8;4;HealthMap;ProMED;6418964;2019-04-13
+9;4;ProMED;OIE;6418964;2019-04-13
+10;4;OIE;Bhutan Vet Auth;6418964;2019-04-11
+11;5;HealthMap;Reuters;6399058;2019-04-02
+12;5;Reuters;China Vet Auth;6399058;2019-04-02
+13;6;HealthMap;Setopati;6372413;2019-03-17
+14;6;Setopati;Nepal's Department of Livestock Services;6372413;2019-03-17
+15;7;HealthMap;Xinhua;6356822;2019-03-08
+16;7;Xinhua;Quang Nam agriculture center;6356822;2019-03-08
+17;8;HealthMap;Twitter;6350016;2019-03-03
+18;8;Twitter;FluTrackers;6350016;2019-03-03
+19;8;FluTrackers;Egypt Vet Auth;6350016;2019-03-03
+20;9;HealthMap;Physician's Weekly;6330863;2019-02-22
+21;9;Physician's Weekly;Reuters;6330863;2019-02-22
+22;9;Reuters;China Vet Auth;6330863;2019-02-22
+23;10;HealthMap;Pulse.ng;6325358;2019-02-19
+24;10;Pulse.ng;News Agency of Nigeria;6325358;2019-02-19
+25;10;News Agency of Nigeria;Chief vet of the state;6325358;2019-02-19
+26;11;HealthMap;Taiwan News;6324333;2019-02-19
+27;11;Taiwan News;China Animal Disease Control Center;6324333;2019-02-19
+28;12;HealthMap;Taiwan News;6323366;2019-02-18
+29;12;Taiwan News;China Animal Disease Control Center;6323366;2019-02-18
+30;13;HealthMap;Twitter;6314472;2019-02-13
+31;13;Twitter;FluTrackers;6314472;2019-02-13
+32;13;FluTrackers;HindiNews;6314472;2019-02-09
+32;13;HindiNews;District Animal Husbandry Department;6314472;2019-02-09
+33;14;HealthMap;Xinhua;6314353;2019-02-13
+34;14;Xinhua;Namibia Vet Auth;6314353;2019-02-13
+35;15;HealthMap;The Namibian;6314163;2019-02-13
+36;15;The Namibian;Namibia Vet Auth;6314163;2019-02-13
+37;16;HealthMap;Hindustantimes;6311752;2019-02-12
+38;16;Hindustantimes;District Animal Husbandry Department;6311752;2019-02-12
+39;17;HealthMap;MENAFN;6309364;2019-02-09
+40;17;MENAFN;UAE Environmental Ministry;6309364;2019-02-09
+41;18;HealthMap;The Telegraph;6308893;2019-02-10
+42;18;The Telegraph;NIHSAD;6308893;2019-02-10
+43;19;HealthMap;Times of India;6307967;2019-02-10
+44;19;Times of India;NIHSAD;6307967;2019-02-10
+45;20;HealthMap;Focus Taiwan;6284159;2019-01-29
+46;20;Focus Taiwan;China Animal Disease Control Center;6284159;2019-01-29
+47;21;HealthMap;Odisha Bytes;6281111;2019-01-28
+48;22;HealthMap;Twitter;6280498;2019-01-26
+49;22;Twitter;FluTrackers;6280498;2019-01-26
+50;23;HealthMap;Focus Taiwan;6279383;2019-01-26
+51;23;Focus Taiwan;China Animal Disease Control Center;6279383;2019-01-26
+52;24;HealthMap;Twitter;6276906;2019-01-25
+53;24;Twitter;Avian Flu Diary;6276906;2019-01-25
+54;24;Avian Flu Diary;Korea's ministry of environment;6276906;2019-01-25
+55;25;HealthMap;ProMED;6265094;2019-01-17
+56;25;ProMED;OIE;6265094;2019-01-17
+57;25;OIE;UAE Vet Auth;6265094;2019-01-17
+58;26;HealthMap;Emirates247;6263439;2019-01-17
+59;26;Emirates247;OIE;6263439;2019-01-17
+60;26;OIE;UAE Vet Auth;6263439;2019-01-17
+61;27;HealthMap;United News of India;6262287;2019-01-12
+62;28;HealthMap;Business Standard;6255423;2019-01-12
+63;28;Business Standard;NIHSAD;6255423;2019-01-12
+64;29;HealthMap;Business Standard;6255423;2019-01-12
+65;29;Business Standard;Regional Diseases Diagnotic Laboratory;6255423;2019-01-12
+66;30;HealthMap;Yonhap News;6251032;2019-01-10
+67;30;Yonhap News;Korea's ministry of environment;6251032;2019-01-10
+68;31;HealthMap;Xinhua;6245522;2019-01-07
+69;31;Xinhua;Long An Department of Agriculture and Rural Development;6245522;2019-01-07
+70;32;HealthMap;The Hindu;6245026;2019-01-06
+71;32;The Hindu;Regional Diseases Diagnotic Laboratory;6245026;2019-01-06
+72;33;HealthMap;India Today;6244406;2019-01-06
+73;34;HealthMap;India Today;6244406;2019-01-06
+74;34;India Today;NIHSAD;6244406;2019-01-06
+75;35;HealthMap;Twitter;6239809;2018-12-31
+76;35;Twitter;Crofsblog;6239809;2018-12-31
+77;35;Crofsblog;Times of India;6239809;2018-12-31
+78;35;Times of India;Patna Zoo Director;6239809;2018-12-31
+79;36;HealthMap;Zeenews;6239405;2019-01-01
+80;36;Zeenews;India Vet Auth;6239405;2019-01-01
+81;37;HealthMap;Twitter;6231463;2018-12-25
+82;37;Twitter;Avian Flu Diary;6231463;2018-12-25
+83;38;HealthMap;Twitter;6231463;2018-12-25
+84;38;Twitter;Avian Flu Diary;6231463;2018-12-25
+85;38;Avian Flu Diary;India Chief Conservator of Forests Bihar;6231463;2018-12-25
+86;39;HealthMap;Twitter;6231468;2018-12-25
+87;39;Twitter;FluTrackers;6231468;2018-12-25
+88;39;FluTrackers;India Vet Auth;6231468;2018-12-25
+89;40;HealthMap;Times of India;6228090;2018-12-27
+90;40;Times of India;NIHSAD;6228090;2018-12-27
+91;41;HealthMap;ProMED;6225831;2018-12-26
+92;41;ProMED;India Vet Auth;6225831;2018-12-26
+93;41;India Vet Auth;District Animal Husbandry Department;6225831;2018-12-26
+94;42;HealthMap;Times of India;6222787;2018-12-25
+95;42;Times of India;India Vet Auth;6222787;2018-12-25
+96;43;HealthMap;Times of India;6218937;2018-12-21
+97;43;Times of India;Divisionnal commissioner;6218937;2018-12-21
+98;44;HealthMap;Down To Earth Magazine;6216960;2018-12-20
+99;44;Down To Earth Magazine;Fisheries and Animal Ressources Developpment Department;6216960;2018-12-20
+100;44;Fisheries and Animal Ressources Developpment Department;India Vet Auth;6216960;2018-12-20
+101;45;HealthMap;Reuters;6215917;2018-12-19
+102;45;Reuters;Bulgaria Vet Auth;6215917;2018-12-19
+103;45;Bulgaria Vet Auth;Bulgaria's National Reference Laboratory;6215917;2018-12-19
+104;46;HealthMap;Odisha Bytes;6215116;2018-12-20
+105;46;Odisha Bytes;Fisheries and Animal Ressources Developpment Department;6215116;2018-12-20
+106;47;HealthMap;Twitter;6210593;2018-12-15
+107;47;Twitter;Crofsblog;6210593;2018-12-15
+108;47;Crofsblog;Fisheries and Animal Ressources Developpment Department;6210593;2018-12-15
+109;48;HealthMap;kalingaTV;6207202;2018-12-13
+110;48;kalingaTV;NIHSAD;6207202;2018-12-13
+111;49;HealthMap;Focus Taiwan;6197582;2018-12-08
+112;49;Focus Taiwan;Bureau of Animal and Plant Health Inspection and Quarantine (Taiwan);6197582;2018-12-08
+113;50;HealthMap;Financial Tribune;6193040;2018-12-04
+114;50;Financial Tribune;OIE;6193040;2018-12-04
+115;50;OIE;Iran Vet Auth;6193040;2018-12-04
+116;51;HealthMap;Reuters;6177637;2018-12-02
+117;51;Reuters;OIE;6177637;2018-12-02
+118;51;OIE;Iran Vet Auth;6177637;2018-12-02
+119;52;HealthMap;Pioneer Press;6127335;2018-11-04
+120;53;HealthMap;Focus News;6121825;2018-10-31
+121;54;HealthMap;Leader Telegram;6121777;2018-10-29
+122;55;HealthMap;Twitter;6109337;2018-10-24
+123;55;Twitter;American Veterinary Medical Association;6109337;2018-10-24
+124;55;American Veterinary Medical Association;Star Tribune;6109337;2018-10-24
+125;56;HealthMap;KNUJ;6107845;2018-10-23
+126;57;HealthMap;Twitter;6079921;2018-10-09
+127;57;Twitter;Reuters;6079921;2018-10-09
+128;58;HealthMap;Shine News;6080054;2018-10-09
+129;58;Shine News;China Vet Auth;6080054;2018-10-09
+130;59;HealthMap;Twitter;6072617;2018-10-05
+131;59;Twitter;Reuters;6072617;2018-10-05
+132;60;HealthMap;The Tribune;6060294;2018-09-29
+133;61;HealthMap;Channel NewsAsia;6043919;2018-09-21
+134;62;HealthMap;Focus News;6043341;2018-09-21
+135;63;HealthMap;OIE;6031165;2018-09-12
+136;63;OIE;US Vet Auth;6031165;2018-09-12
+137;64;HealthMap;Twitter;6029166;2018-09-14
+138;64;Twitter;Reuters;6029166;2018-09-14
+139;64;Reuters;OIE;6029166;2018-09-14
+140;64;OIE;US Vet Auth;6029166;2018-09-14
+141;65;HealthMap;Khmer Times;5995929;2018-08-29
+142;66;HealthMap;Twitter;5976671;2018-08-20
+143;66;Twitter;American Veterinary Medical Association;5976671;2018-08-20
+144;66;American Veterinary Medical Association;Reuters;5976671;2018-08-20
+145;66;Reuters;OIE;5976671;2018-08-20
+146;66;OIE;Russia Vet Auth;5976671;2018-08-20
+147;67;HealthMap;Reuters;5971470;2018-08-17
+148;67;Reuters;OIE;5971470;2018-08-17
+149;67;OIE;Russia Vet Auth;5971470;2018-08-17
+150;68;HealthMap;The Strait Times;5960528;2018-08-11
+151;68;The Strait Times;Sabah Veterinary Services Department;5960528;2018-08-11
+152;69;HealthMap;The Malaysian Insight;5958698;2018-08-10
+153;69;The Malaysian Insight;Sabah Veterinary Services Department;5958698;2018-08-10
+154;70;HealthMap;Reuters;5949897;2018-08-06
+155;70;Reuters;OIE;5949897;2018-08-06
+156;70;OIE;Malaysia Vet Auth;5949897;2018-08-06
+157;71;HealthMap;Reuters;5945608;2018-08-03
+158;71;Reuters;OIE;5945608;2018-08-03
+159;71;OIE;Vietnam Vet Auth;5945608;2018-08-03
+160;72;HealthMap;The Strait Times;5945501;2018-08-03
+161;72;The Strait Times;Sabah Veterinary Services Department;5945501;2018-08-03
+162;73;HealthMap;Free Malaysia Today;5945500;2018-08-03
+163;73;Free Malaysia Today;Malaysia Vet Auth;5945500;2018-08-03
+164;73;Malaysia Vet Auth;Sabah Veterinary Services Department;5945500;2018-08-03
+165;74;HealthMap;VnExpress International;5942909;2018-08-02
+166;74;VnExpress International;Vietnam Vet Auth;5942909;2018-08-02
+167;75;HealthMap;Kuwait news agency;5917161;2018-07-20
+168;75;Kuwait news agency;Kuwait's ministry of environment;5917161;2018-07-20
+169;76;HealthMap;Novinite.com (Sofia News Agency);5908149;2018-07-07
+170;76;Novinite.com (Sofia News Agency);Bulgaria Vet Auth;5908149;2018-07-07
+173;78;HealthMap;The Indian Tribune;5889207;2018-07-05
+174;78;The Indian Tribune;India's government;5889207;2018-07-05
+175;79;HealthMap;The Indian Tribune;5889207;2018-07-05
+176;79;The Indian Tribune;NIHSAD;5889207;2018-07-05
+187;84;HealthMap;Xinhua;6430421;2019-04-19
+188;84;Xinhua;OIE;6430421;2019-04-19
+189;84;OIE;Cambodia Vet Auth;6430421;2019-04-19
+190;85;HealthMap;WSAU;6401842;2019-04-03
+191;85;WSAU;Reuters;6401842;2019-04-03
+192;85;Reuters;Bulgaria Vet Auth;6401842;2019-04-03
+193;86;HealthMap;Today.ng;6333895;2019-02-19
+194;86;Today.ng;News Agency of Nigeria;6333895;2019-02-19
+195;86;News Agency of Nigeria;Chief Veterinary Officer of the Plateau State;6333895;2019-02-19
+196;87;HealthMap;Daily Trust;6333598;2019-02-24
+197;87;Daily Trust;News Agency of Nigeria;6333598;2019-02-24
+198;87;News Agency of Nigeria;Chief Veterinary Officer of the Plateau State;6333598;2019-02-24
+199;88;HealthMap;Twitter;6316783;2019-02-14
+200;88;Twitter;Antara News;6316783;2019-02-14
+201;88;Antara News;Chief of Agricultural Service, Bandarlampung;6316783;2019-02-13
+202;89;HealthMap;ProMED;6312809;2019-02-12
+203;89;ProMED;The Poultry Site;6312809;2019-02-12
+204;89;The Poultry Site;UAE Ministery of Climate Change and Environment;6312809;2019-02-11
+205;89;UAE Ministery of Climate Change and Environment;OIE;6312809;2019-02-11
+206;89;OIE;Kuwait Vet Auth;6312809;2019-02-05
+207;90;HealthMap;The Poultry Site;6312809;2019-02-11
+208;90;The Poultry Site;UAE Ministery of Climate Change and Environment;6312809;2019-02-11
+209;90;UAE Ministery of Climate Change and Environment;OIE;6312809;2019-02-11
+210;90;OIE;Kuwait Vet Auth;6312809;2019-02-05
+211;91;HealthMap;Odisha Bytes;6281111;2019-01-28
+212;92;HealthMap;Times of India;6267299;2019-01-19
+213;92;Times of India;Gaya administrator;6267299;2019-01-19
+214;93;HealthMap;United News of India;6219155;2018-12-21
+215;94;HealthMap;VietnamNews;6203505;2018-12-10
+216;94;VietnamNews;Hon Dat District animal husbandry division;6203505;2018-12-10
+217;95;HealthMap;Yahoo News;6160553;2018-11-22
+218;95;Yahoo News;Reuters;6160553;2018-11-22
+219;95;Reuters;China Animal Health and Epidemiolology Center;6160553;2018-11-22
+220;96;HealthMap;Reuters;6157457;2018-11-21
+221;96;Reuters;China Vet Auth;6157457;2018-11-21
+222;99;HealthMap;Twitter;6118437;2018-10-29
+223;99;Twitter;Reuters;6118437;2018-10-29
+224;99;Reuters;Bulgaria Vet Auth;6118437;2018-10-29
+225;100;HealthMap;Channel NewsAsia;6118396;2018-10-29
+226;100;Channel NewsAsia;Reuters;6118396;2018-10-29
+227;100;Reuters;Bulgaria Vet Auth;6118396;2018-10-29
+228;101;HealthMap;Twitter;6098464;2018-10-18
+229;101;Twitter;Reuters;6098464;2018-10-18
+230;101;Reuters;Bulgaria Vet Auth;6098464;2018-10-18
+231;102;HealthMap;Agriculture.com;6098439;2018-10-18
+232;102;Agriculture.com;Reuters;6098439;2018-10-18
+233;102;Reuters;Bulgaria Vet Auth;6098439;2018-10-18
+234;103;HealthMap;Channel NewsAsia;6083945;2018-10-09
+235;103;Channel NewsAsia;China Vet Auth;6083945;2018-10-09
+236;104;HealthMap;Reuters;6072548;2018-10-05
+237;104;Reuters;Bulgaria Vet Auth;6072548;2018-10-05
+238;105;HealthMap;WGME;5982694;2018-08-23
+239;105;WGME;USA National Oceanic and Atmospheric Administration;5982694;2018-08-23
+240;106;HealthMap;The Star Online;5947410;2018-08-04
+241;106;The Star Online;Sabbah Vet Auth;5947410;2018-08-04
+242;107;HealthMap;The Star Online;5947410;2018-08-04
+243;107;The Star Online;Whatsapp;5947410;2018-08-04
+244;108;HealthMap;OIE;6543299;2019-06-28
+245;108;OIE;Denmark Vet Auth;6543299;2019-06-28
+599;109;HealthMap;The Poultry Site;6309947;2019-02-11
+600;109;The Poultry Site;UAE Ministery of Climate Change and Environment;6309947;2019-02-11
+601;109;UAE Ministery of Climate Change and Environment;OIE;6309947;2019-02-11
+602;109;OIE;Kuwait Vet Auth;6309947;2019-02-05
+335;110;HealthMap;The Strait Times;6161711;2018-11-23
+336;110;The Strait Times;Reuters;6161711;2018-11-23
+337;110;Reuters;China Animal Health and Epidemiolology Center;6161711;2018-11-22
+338;111;HealthMap;The Moveefy;6242315;2019-01-04
+339;111;The Moveefy;Bihar animal husbandry department;6242315;2019-01-04
+340;112;HealthMap;The Moveefy;6230772;2018-12-27
+341;112;The Moveefy;Ranchi zoo vet;6230772;2018-12-27
+342;113;HealthMap;KFGO News;6215520;2018-12-19
+343;113;KFGO News;Bulgaria Vet Auth;6215520;2018-12-19
+246;114;HealthMap;United News of India;6219155;2018-12-21

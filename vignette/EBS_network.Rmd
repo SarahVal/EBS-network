@@ -1,0 +1,705 @@
+---
+title: "Event-based surveillance - network analysis (AI)"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, message=FALSE, warning=F}
+suppressMessages(library(readxl))
+library(reshape2)
+library(dplyr)
+library(ggplot2)
+library(igraph)
+library(stringr)
+library(ggpubr)
+library(readr)
+library(RColorBrewer)
+source("./sna_functions.R")
+```
+
+
+# 1. Data Import
+
+
+```{r, message=FALSE, warning=F}
+
+# Reports from PADI-web
+REPORTS_PW <- read_delim("./dataverse/padiweb_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
+
+# Reports from HealthMap
+REPORTS_HM <- read_delim("./dataverse/healthmap_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
+
+# Events empres-i database
+OIE_EVENTS  <- open_official_AI("./dataverse/AI_official.csv", date_format =  "%Y-%m-%d")
+OIE_EVENTS <- filter(OIE_EVENTS, reportingdate >= "2018-07-01") %>% filter(reportingdate <= "2019-06-30")
+
+# Manually recorded non-official events
+UNOFFICIAL_EVENTS <- read_delim("./dataverse/unofficial_events.csv", 
+                        delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+
+# Sources
+SOURCES <- read_delim(file="./dataverse/sources.csv", delim=";", show_col_types = F) %>% mutate(label = str_trim(label))
+
+# Tables for PADI-web network
+EVENTS_PW <- read_delim("./dataverse/padiweb_events.csv", 
+                        delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_PW <- read_delim("./dataverse/padiweb_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_PW$source_1 <- str_trim(PATHS_PW$source_1)
+PATHS_PW$source_2 <- str_trim(PATHS_PW$source_2)
+PATHS_EVENTS_PW <- read_delim("./dataverse/padiweb_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+
+# Tables for HealthMap network
+EVENTS_HM <- read_delim("./dataverse/healthmap_events.csv", 
+                        delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_HM <- read_delim("./dataverse/healthmap_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_HM$source_1 <- str_trim(PATHS_HM$source_1)
+PATHS_HM$source_2 <- str_trim(PATHS_HM$source_2)
+PATHS_HM$id_from_source_1 <- as.character(PATHS_HM$id_from_source_1)
+PATHS_EVENTS_HM <- read_delim("./dataverse/healthmap_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+
+```
+
+
+# 2. Descriptive statistics
+
+## 2.1. Events
+
+### Official events from Empres-i
+```{r, message=FALSE, warning=F}
+rbind(OIE_EVENTS %>% count(type_host) %>% 
+  mutate(prop = prop.table(n)),
+  c("total", nrow(OIE_EVENTS), 1))
+```
+
+
+### Events disseminated through the networks
+```{r}
+# PADI-web
+EVENTS_PW <- EVENTS_PW %>% filter(id_event %in% PATHS_EVENTS_PW$id_event) 
+rbind(EVENTS_PW %>% select(id_event, type_event, host) %>% distinct() %>% count(type_event) %>% 
+    mutate(prop = round(prop.table(n),3)),
+  c("total", nrow(EVENTS_PW), 1))
+
+# HealthMap
+EVENTS_HM <- EVENTS_HM %>% filter(id_event %in% PATHS_EVENTS_HM$id_event) 
+rbind(EVENTS_HM %>% select(id_event, type_event, host) %>% distinct() %>% count(type_event) %>% 
+  mutate(prop = round(prop.table(n),3)),
+  c("total", nrow(EVENTS_HM), 1))
+```
+
+### Overlap of detected events
+```{r}
+# PADI-web
+EVENTS_PW %>% filter(!id_event %in% EVENTS_HM$id_event) %>% select(id_event, type_event, type_host) %>% group_by(type_event) %>% distinct() %>% count(type_host)
+
+# HealthMap
+EVENTS_HM %>% filter(!id_event %in% EVENTS_PW$id_event) %>% select(id_event, type_event, type_host) %>% group_by(type_event) %>% distinct() %>% count(type_host)
+
+```
+
+## 2.2 Host
+
+```{r}
+# PADI-web
+EVENTS_PW %>% select(id_event, type_event, type_host) %>% group_by(type_event) %>% distinct() %>% count(type_host)%>% 
+  mutate(prop = round(prop.table(n),3))
+
+# HealthMap
+EVENTS_HM %>% select(id_event, type_event, type_host) %>% group_by(type_event) %>% distinct() %>% count(type_host)%>% 
+  mutate(prop = round(prop.table(n),3))
+```
+
+## 2.3 Reports
+
+### Types of reports
+```{r, message=FALSE}
+# PADI-web
+rbind(REPORTS_PW %>% count(type) %>% 
+  mutate(prop = prop.table(n)) %>% arrange(desc(prop)),
+  c("total", nrow(REPORTS_PW), 1))
+
+# HealthMap
+rbind(REPORTS_HM %>% count(type) %>% 
+  mutate(prop = prop.table(n)) %>% arrange(desc(prop)),
+  c("total", nrow(REPORTS_HM), 1))
+```
+
+
+### Events of reports
+```{r}
+PATHS_EVENTS_PW  <- merge(PATHS_EVENTS_PW, EVENTS_PW)
+REPORTS_EVENTS_PW <- merge(PATHS_EVENTS_PW, select(PATHS_PW, id_path, id_from_source_1))  %>% distinct()
+
+event_by_report_pw <- aggregate(select(REPORTS_EVENTS_PW, id_from_source_1),
+                                  by = list(id_article= REPORTS_EVENTS_PW$id_from_source_1), 
+                                  FUN = length)
+
+
+PATHS_EVENTS_HM  <- merge(PATHS_EVENTS_HM, EVENTS_HM)
+REPORTS_EVENTS_HM <-merge(PATHS_EVENTS_HM, select(PATHS_HM, id_path, id_from_source_1))%>% distinct()
+event_by_report_hm <- aggregate(select(REPORTS_EVENTS_HM, id_from_source_1),
+                                  by = list(id_article = REPORTS_EVENTS_HM$id_from_source_1), 
+                                  FUN = length)
+
+summary(event_by_report_pw$id_from_source_1)
+summary(event_by_report_hm$id_from_source_1)
+
+```
+
+## 2.4. Timeliness
+
+
+```{r}
+# Official events
+id_events_off <- pull(filter(EVENTS_PW, type_event == "official"), id_event)
+
+# Paths transmitting official events
+id_paths_off <- unique(pull(filter(PATHS_EVENTS_PW, id_event %in% id_events_off), id_path))
+
+PATHS_EVENTS_OFF_PW <- filter(PATHS_EVENTS_PW, id_path %in% id_paths_off) %>% filter(id_event %in% id_events_off)
+  
+PATHS_EVENTS_OFF_PW <- merge(PATHS_EVENTS_OFF_PW, EVENTS_PW, by.all = "id_event", all.y =F) 
+
+PATHS_EVENTS_OFF_PW <- merge(PATHS_EVENTS_OFF_PW, select(PATHS_PW, id_path, source_1, date_edge), by.all = "id_path")
+
+PATHS_EVENTS_OFF_PW <- PATHS_EVENTS_OFF_PW %>% filter(source_1 %in% c("PADI-web"))
+
+PATHS_EVENTS_OFF_PW$timeliness <- as.numeric(difftime(PATHS_EVENTS_OFF_PW$date_edge, 
+                                                    PATHS_EVENTS_OFF_PW$reportingdate,
+     units="days"))
+
+
+# For each event, detect the first report which detected it
+df_timeliness_pw <- PATHS_EVENTS_OFF_PW %>% select(id_event, type_host, timeliness) %>%
+  group_by(id_event, type_host) %>% 
+  filter(timeliness == min(timeliness)) %>% unique()
+
+summary(df_timeliness_pw$timeliness)
+
+# Early detection
+length(which(df_timeliness_pw$timeliness<0))
+
+# Late detection
+length(which(df_timeliness_pw$timeliness>=0))
+
+```
+```{r}
+host_levels <-  c("domestic", "wild", "environmental", "unspecified")
+df_timeliness_pw <- df_timeliness_pw %>% mutate(Host = factor(type_host, levels = host_levels)) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_pw))
+
+nrow(filter(PATHS_EVENTS_OFF_PW, type_host == "wild") %>% filter(timeliness<0))
+nrow(filter(PATHS_EVENTS_OFF_PW, type_host == "domestic") %>% filter(timeliness<0))
+```
+
+```{r}
+# Official events
+id_events_off <- pull(filter(EVENTS_HM, type_event == "official"), id_event)
+
+# Paths transmitting official events
+id_paths_off <- unique(pull(filter(PATHS_EVENTS_HM, id_event %in% id_events_off), id_path))
+
+PATHS_EVENTS_OFF_HM <- filter(PATHS_EVENTS_HM, id_path %in% id_paths_off) %>% filter(id_event %in% id_events_off)
+  
+PATHS_EVENTS_OFF_HM <- merge(PATHS_EVENTS_OFF_HM, EVENTS_HM, by.all = "id_event", all.y =F) 
+
+PATHS_EVENTS_OFF_HM <- merge(PATHS_EVENTS_OFF_HM, select(PATHS_HM, id_path, source_1, date_edge), by.all = "id_path")
+
+PATHS_EVENTS_OFF_HM <- PATHS_EVENTS_OFF_HM %>% filter(source_1 %in% c("HealthMap"))
+
+PATHS_EVENTS_OFF_HM$timeliness <- as.numeric(difftime(PATHS_EVENTS_OFF_HM$date_edge, 
+                                                    PATHS_EVENTS_OFF_HM$reportingdate,
+     units="days"))
+
+# For each event, detect the first report which detected it
+df_timeliness_hm <- PATHS_EVENTS_OFF_HM %>% select(id_event, type_host, timeliness) %>%
+  group_by(id_event, type_host) %>% 
+  filter(timeliness == min(timeliness)) %>% unique()
+
+df_timeliness_hm <- df_timeliness_hm %>% mutate(Host = factor(type_host, levels = host_levels))
+
+
+df_timeliness_hm <- df_timeliness_hm %>% select(-id_event) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_hm))
+
+
+summary(PATHS_EVENTS_OFF_HM$timeliness)
+
+# Early detection
+length(which(PATHS_EVENTS_OFF_HM$timeliness<0))
+
+# Late detection
+length(which(PATHS_EVENTS_OFF_HM$timeliness>=0))
+```
+```{r}
+nrow(filter(PATHS_EVENTS_OFF_HM, type_host == "wild") %>% filter(timeliness<0))
+nrow(filter(PATHS_EVENTS_OFF_HM, type_host == "domestic") %>% filter(timeliness<0))
+```
+
+```{r, warning=F}
+timeliness_pw <- create_timeliness_plot(df_timeliness_pw, min_timeliness = -35, max_timeliness = 30, size_font = 14)
+timeliness_pw %>% ggexport(filename = "./figures/pw_timeliness.png", width = 800, height = 480)
+timeliness_pw
+```
+
+```{r , warning=FALSE}
+timeliness_hm <-create_timeliness_plot(df_timeliness_hm, min_timeliness = -35, max_timeliness = 30, size_font = 14)
+timeliness_hm %>% ggexport(filename = "./figures/hm_timeliness.png", width = 800, height = 480)
+timeliness_hm
+```
+
+## 2.5. Paths metrics
+
+### Reactivity                        
+
+```{r , echo=FALSE}
+# PADI-web
+reactivity_pw <- calc_reactivity(PATHS_PW)
+table(reactivity_pw$reactivity)/nrow(reactivity_pw)
+
+# HealthMap
+reactivity_hm <- calc_reactivity(PATHS_HM)
+table(reactivity_hm$reactivity)/nrow(reactivity_hm)
+```
+### Length 
+
+```{r , echo=FALSE}
+# PADI-web
+length_pw <- PATHS_PW %>% count(id_path)
+rbind(table(length_pw$n),table(length_pw$n)/nrow(length_pw))
+
+# HealthMap
+length_hm <- PATHS_HM %>% count(id_path)
+rbind(table(length_hm$n),table(length_hm$n)/nrow(length_hm))
+
+```
+
+### 2.4. Sources 
+
+#### Sources in PADI-web network
+```{r}
+SOURCES_PW <- c(PATHS_PW$source_1, PATHS_PW$source_2) %>% unique()
+SOURCES_PW <- merge(data.frame(source = SOURCES_PW),
+                     select(SOURCES, label, id, type_source), 
+                     by.x = 'source', by.y = 'label',all.x=TRUE, all.y=FALSE)                                 
+SOURCES_PW %>% filter(!is.na(type_source))  %>% 
+  count(type_source) %>% 
+  arrange(desc(n)) %>%          
+  mutate(prop = prop.table(n))                                
+
+```
+
+#### Sources in HealthMap network
+```{r}
+SOURCES_HM <- c(PATHS_HM$source_1, PATHS_HM$source_2) %>% unique()
+SOURCES_HM <- merge(data.frame(source = SOURCES_HM),
+                     select(SOURCES, label, id, type_source), 
+                     by.x = 'source', by.y = 'label',all.x=TRUE, all.y=FALSE)                                 
+SOURCES_HM %>% 
+  count(type_source) %>% 
+  arrange(desc(n)) %>%          
+  mutate(prop = prop.table(n))                                
+
+```
+
+#### Sources specific to PADI-web network
+```{r}
+n_unique = SOURCES_PW$source[!SOURCES_PW$source %in% SOURCES_HM$source] %>% length()
+
+rbind(SOURCES_PW %>% filter(!source %in% SOURCES_HM$source) %>%
+  count(type_source) %>% 
+  arrange(desc(n)) %>%          
+  mutate(prop = prop.table(n)),
+  c("total", n_unique, 1))
+
+```
+#### Sources specific to HealthMap network
+```{r}
+n_unique = SOURCES_HM$source[!SOURCES_HM$source %in% SOURCES_HM$source] %>% length()
+
+rbind(SOURCES_HM %>% filter(!source %in% SOURCES_PW$source) %>%
+  count(type_source) %>% 
+  arrange(desc(n)) %>%          
+  mutate(prop = prop.table(n)),
+  c("total", n_unique, 1))
+
+```
+
+
+# 3. Qualitative network analysis
+
+## 3.1. Primary sources (emettor)
+
+```{r}
+
+# Late paths
+id_path_late_pw <- pull(filter(PATHS_EVENTS_OFF_PW, timeliness >= 0), id_path)
+PATHS_LATE_PW <- filter(PATHS_PW, id_path %in% id_path_late_pw)
+
+id_path_late_hm <- pull(filter(PATHS_EVENTS_OFF_HM, timeliness >= 0), id_path)
+PATHS_LATE_HM<- filter(PATHS_HM, id_path %in% id_path_late_hm)
+
+primary_late_pw <- calc_primary_source(PATHS_LATE_PW, SOURCES)
+primary_late_hm <- calc_primary_source(PATHS_LATE_HM, SOURCES)
+
+# Early paths
+id_path_early_pw <- pull(filter(PATHS_EVENTS_OFF_PW, timeliness <0), id_path)
+PATHS_EARLY_PW <- filter(PATHS_PW, id_path %in% id_path_early_pw)
+
+id_path_early_hm <- pull(filter(PATHS_EVENTS_OFF_HM, timeliness < 0), id_path)
+PATHS_EARLY_HM<- filter(PATHS_HM, id_path %in% id_path_early_hm)
+
+primary_early_pw<- calc_primary_source(PATHS_EARLY_PW, SOURCES) 
+primary_early_hm<- calc_primary_source(PATHS_EARLY_HM, SOURCES) 
+
+
+# Non-official paths
+id_events_unoff <- unique(c(pull(filter(EVENTS_PW, type_event == "unofficial"), id_event),
+pull(filter(EVENTS_HM, type_event == "unofficial"), id_event)))
+
+id_path_unoff_pw <- unique(pull(filter(PATHS_EVENTS_PW, id_event %in% id_events_unoff), id_path))
+PATHS_UNOFF_PW <- filter(PATHS_PW, id_path %in% id_path_unoff_pw)
+
+id_path_unoff_hm <- unique(pull(filter(PATHS_EVENTS_HM, id_event %in% id_events_unoff), id_path))
+PATHS_UNOFF_HM <- filter(PATHS_HM, id_path %in% id_path_unoff_hm)
+
+
+primary_unoff_pw<- calc_primary_source(PATHS_UNOFF_PW, SOURCES) 
+primary_unoff_hm<- calc_primary_source(PATHS_UNOFF_HM, SOURCES) 
+
+```
+
+Primary sources aggregated per type
+
+```{r, warning = F}
+excluded_sources <- c("local person", "research org.", "private company")
+primary_late_pw_aggr <- aggregate_source(primary_late_pw, exclude = excluded_sources)
+primary_late_hm_aggr <- aggregate_source(primary_late_hm, exclude = excluded_sources)
+
+primary_early_pw_aggr <- aggregate_source(primary_early_pw, exclude = excluded_sources)
+primary_early_hm_aggr <- aggregate_source(primary_early_hm, exclude = excluded_sources)
+
+primary_unoff_pw_aggr <- aggregate_source(primary_unoff_pw)
+primary_unoff_hm_aggr <- aggregate_source(primary_unoff_hm)
+
+```
+
+
+## 3.2. Secondary sources (emettor-receptor)
+
+```{r}
+
+# Late paths
+
+secondary_late_pw <- calc_secondary_source(PATHS_LATE_PW, SOURCES)
+secondary_late_hm <- calc_secondary_source(PATHS_LATE_HM, SOURCES)
+
+# Early paths
+secondary_early_pw<- calc_secondary_source(PATHS_EARLY_PW, SOURCES) 
+secondary_early_hm<- calc_secondary_source(PATHS_EARLY_HM, SOURCES) 
+
+
+# Non-official paths
+secondary_unoff_pw<- calc_secondary_source(PATHS_UNOFF_PW, SOURCES) 
+secondary_unoff_hm<- calc_secondary_source(PATHS_UNOFF_HM, SOURCES) 
+```
+
+```{r}
+secondary_late_pw_aggr <- aggregate_source(secondary_late_pw, exclude = excluded_sources)
+secondary_late_hm_aggr <- aggregate_source(secondary_late_hm, exclude = excluded_sources)
+
+secondary_early_pw_aggr <- aggregate_source(secondary_early_pw, exclude = excluded_sources)
+secondary_early_hm_aggr <- aggregate_source(secondary_early_hm, exclude = excluded_sources)
+
+
+secondary_unoff_pw_aggr <- aggregate_source(secondary_unoff_pw)
+secondary_unoff_hm_aggr <- aggregate_source(secondary_unoff_hm)
+
+```
+
+## 3.3. Distribution per type of sources
+
+### Distribution of primary and secondary sources in late detection
+
+```{r, fig.width=10,fig.height=6}
+df_plot_pw <- convert_source_plot(primary_late_pw_aggr, secondary_late_pw_aggr, table_convert,  exclude = excluded_sources)
+df_plot_hm <- convert_source_plot(primary_late_hm_aggr, secondary_late_hm_aggr, table_convert,  exclude = excluded_sources)
+```
+
+```{r}
+order_source <- c(
+  "National vet. auth.",
+  "Local vet. auth.",
+  "Online news",
+  "Local auth.",
+  "Laboratory",
+  "National auth.",
+  "Radio, TV" ,
+  "International vet. auth.",
+  "Press agency",
+  "Social platform"
+)
+
+p <-
+  create_source_plot(df_plot_pw, min_prop = 0, order_source = order_source)
+g <-
+  create_source_plot(
+    df_plot_hm ,
+    min_prop = 0,
+    order_source = order_source,
+    position_x_axis = "top",
+    legend = F
+  )
+
+p %>% ggsave(
+  filename = "./figures/pw_late_sources.png",
+  width = 6,
+  height = 4,
+  dpi = 300
+)
+g %>% ggsave(
+  filename = "./figures/hm_late_sources.png",
+  width = 6,
+  height = 4,
+  dpi = 300
+)
+
+par(mfrow=c(1,2))
+p
+g
+```
+
+### Distribution of primary and secondary sources in early detection
+
+
+```{r, fig.width=10,fig.height=6}
+df_plot_pw <- convert_source_plot(primary_early_pw_aggr, secondary_early_pw_aggr, table_convert,  exclude = c(excluded_sources, "international vet auth."))
+df_plot_hm <- convert_source_plot(primary_early_hm_aggr, secondary_early_hm_aggr, table_convert,  exclude = c(excluded_sources, "international vet auth."))
+```
+
+```{r}
+order_source <- c(   
+                   "Local vet. auth.",
+                 "National vet. auth.", 
+                      "Local auth.",
+                           "Online news",
+                   "Radio, TV" ,
+                   "Press agency", 
+                   "Laboratory",
+                              "Social platform",
+                       "National auth.")
+
+p <- create_source_plot(df_plot_pw, min_prop = 0, order_source = order_source)
+g <- create_source_plot(df_plot_hm , min_prop = 0.0, order_source= order_source, position_x_axis = "top", legend = F)
+
+
+p
+g
+p %>% ggsave(filename = "./figures/pw_early_sources.png",
+               width = 6, height = 4, dpi = 300)
+
+g %>% ggsave(filename = "./figures/hm_early_sources.png",
+               width = 6, height = 4, dpi = 300)
+```
+### Distribution of primary and secondary sources in the detection of non-official events
+
+```{r, fig.width=10,fig.height=6}
+bind_rows(bind_cols(primary_unoff_pw_aggr, "type" = "primary"),
+          bind_cols(secondary_unoff_pw_aggr, "type" = "secondary"))
+bind_rows(bind_cols(primary_unoff_hm_aggr, "type" = "primary"),
+          bind_cols(secondary_unoff_hm_aggr, "type" = "secondary"))
+
+```
+
+## 3.4. Distribution per geographical focus
+
+```{r}
+primary_early_pw_focus <- merge(primary_early_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_early_pw_focus_aggr <- aggregate_source(primary_early_pw_focus, field = "geographical_focus")
+
+primary_late_pw_focus <- merge(primary_late_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_late_pw_focus_aggr <- aggregate_source(primary_late_pw_focus, field = "geographical_focus")
+
+primary_early_hm_focus <- merge(primary_early_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_early_hm_focus_aggr <- aggregate_source(primary_early_hm_focus, field = "geographical_focus")
+
+primary_late_hm_focus <- merge(primary_late_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_late_hm_focus_aggr <- aggregate_source(primary_late_hm_focus, field = "geographical_focus")
+
+secondary_early_pw_focus <- merge(secondary_early_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_early_pw_focus_aggr <- aggregate_source(secondary_early_pw_focus, field = "geographical_focus")
+
+secondary_late_pw_focus <- merge(secondary_late_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_late_pw_focus_aggr <- aggregate_source(secondary_late_pw_focus, field = "geographical_focus")
+
+secondary_early_hm_focus <- merge(secondary_early_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_early_hm_focus_aggr <- aggregate_source(secondary_early_hm_focus, field = "geographical_focus")
+
+secondary_late_hm_focus <- merge(secondary_late_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_late_hm_focus_aggr <- aggregate_source(secondary_late_hm_focus, field = "geographical_focus")
+
+```
+
+Primary sources:
+```{r}
+plot_focus_primary <- create_sp_focus_plot(primary_late_pw_focus_aggr, primary_late_hm_focus_aggr,
+                                 primary_early_pw_focus_aggr, primary_early_hm_focus_aggr,
+                                 column = "geographical_focus", levels = c("local", "national", "international")) 
+
+plot_focus_primary %>% ggsave(filename = "./figures/focus_primary.png",
+             width = 8.5, height = 4, dpi = 300)
+plot_focus_primary
+
+```
+
+Secondary sources:
+```{r}
+plot_focus_secondary <- create_sp_focus_plot(secondary_late_pw_focus_aggr, secondary_late_hm_focus_aggr,
+                                 secondary_early_pw_focus_aggr, secondary_early_hm_focus_aggr,
+                                 column = "geographical_focus", levels = c("local", "national", "international")) 
+
+plot_focus_secondary %>% ggsave(filename = "./figures/focus_secondary.png",
+             width = 8.5, height = 4, dpi = 300)
+plot_focus_secondary
+```
+
+## 3.5. Distribution per specialization
+
+```{r}
+primary_early_pw_spec <- merge(primary_early_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_early_pw_spec_aggr <- aggregate_source(primary_early_pw_spec, field = "specialization")
+
+primary_late_pw_spec <- merge(primary_late_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_late_pw_spec_aggr <- aggregate_source(primary_late_pw_spec, field = "specialization")
+
+primary_early_hm_spec <- merge(primary_early_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_early_hm_spec_aggr <- aggregate_source(primary_early_hm_spec, field = "specialization")
+
+primary_late_hm_spec <- merge(primary_late_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+primary_late_hm_spec_aggr <- aggregate_source(primary_late_hm_spec, field = "specialization")
+
+
+secondary_early_pw_spec <- merge(secondary_early_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_early_pw_spec_aggr <- aggregate_source(secondary_early_pw_spec, field = "specialization")
+
+secondary_late_pw_spec <- merge(secondary_late_pw, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_late_pw_spec_aggr <- aggregate_source(secondary_late_pw_spec, field = "specialization")
+
+secondary_early_hm_spec <- merge(secondary_early_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_early_hm_spec_aggr <- aggregate_source(secondary_early_hm_spec, field = "specialization")
+
+secondary_late_hm_spec <- merge(secondary_late_hm, select(SOURCES, label, geographical_focus, specialization), by.x = "source", by.y = "label", all.x = T)
+secondary_late_hm_spec_aggr <- aggregate_source(secondary_late_hm_spec, field = "specialization")
+```
+
+
+Primary sources:
+```{r}
+plot_specialization_primary <- create_sp_focus_plot(primary_late_pw_spec_aggr, primary_late_hm_spec_aggr,
+                                           primary_early_pw_spec_aggr, primary_early_hm_spec_aggr,
+                                   column = "specialization", levels = c("general", "specialized")) 
+plot_specialization_primary 
+plot_specialization_primary  %>% ggsave(filename = "./figures/specialization.png",
+                       width = 8, height = 4, dpi = 300)
+
+
+
+```
+
+Secondary sources:
+```{r}
+plot_specialization_secondary  <- create_sp_focus_plot(secondary_late_pw_spec_aggr, secondary_late_hm_spec_aggr,
+                                           secondary_early_pw_spec_aggr, secondary_early_hm_spec_aggr,
+                                   column = "specialization", levels = c("general", "specialized")) 
+plot_specialization_secondary
+plot_specialization_secondary %>% ggsave(filename = "./figures/specialization_secondary.png",
+                       width = 8, height = 4, dpi = 300)
+
+
+
+```
+
+
+# 4. Quantitative network analysis
+
+
+
+### 3.1. Graph creation
+```{r}
+
+PATHS_NETWORK <- create_df_network(bind_rows(PATHS_PW, PATHS_HM), SOURCES)
+g <- graph.data.frame(PATHS_NETWORK, directed = TRUE)
+
+PATHS_NETWORK_PW <- create_df_network(PATHS_PW, SOURCES)
+g_pw <- graph.data.frame(PATHS_NETWORK_PW, directed = TRUE)
+
+PATHS_NETWORK_HM <- create_df_network(PATHS_HM, SOURCES)
+g_hm <- graph.data.frame(PATHS_NETWORK_HM, directed = TRUE)
+
+```
+### 3.2. Graph characteristics
+
+#### Nodes
+```{r}
+vcount(g_pw)
+vcount(g_hm)
+```
+
+#### Vertices
+```{r}
+ecount(g_pw)
+ecount(g_hm)
+```
+
+#### Paths
+```{r}
+length(unique(PATHS_PW$id_path))
+length(unique(PATHS_HM$id_path))
+```
+
+### 3.3. Nodes characteristics   
+
+```{r, warning=F}
+nodes <- df_nodes_importance(g, node_remove = NULL)
+nodes_type <- merge(nodes, SOURCES, by.x = "source", by.y = "label", all.x = T) %>% filter(!is.na(type_source))
+plot_in <- boxplot_sources(nodes_type)
+plot_out <- boxplot_sources(nodes_type, type = "out")
+plot_all <- boxplot_sources(nodes_type, type = "all")
+plot_in %>% ggsave(filename = "./figures/in_degree.png",
+                    width = 8, height = 4, dpi = 300)
+plot_out %>% ggsave(filename = "./figures/out_degree.png",
+                    width = 8, height = 4, dpi = 300)
+plot_all %>% ggsave(filename = "./figures/all_degree.png",
+                    width = 8, height = 4, dpi = 300)
+
+```
+
+```{r, warning=F}
+par(mfrow=c(1,3)) 
+plot_in 
+plot_out 
+plot_all
+```
+
+Most important sources in terms of degree or centrality values
+
+
+Higest in-degree
+```{r}
+nodes %>% slice_max(in_degree, n = 5)
+```
+
+Higest out-degree
+```{r}
+nodes %>% slice_max(out_degree, n = 5)
+```
+
+Higest all-degree
+```{r}
+nodes %>% slice_max(all_degree, n = 5)
+```
+`

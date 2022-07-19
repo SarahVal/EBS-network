@@ -1,0 +1,316 @@
+id;label;type_source;specialization;geographical_focus
+1;A farmer;local person;specialized;local
+2;Acting Chief Veterinary Officier;national vet auth.;specialized;national
+3;Africa Feeds;online news source;general;international
+4;African Daily Voice;press agency;general;international
+5;AG Week;online news source;general;international
+6;Agriculture.com;online news source;specialized;international
+7;Agriland;online news source;general;international
+8;allAfrica;online news source;general;international
+9;Al-Rai Daily;online news source;general;international
+10;American Veterinary Medical Association;research org.;specialized;national
+11;Animal Disease Research Laboratory of Cuttack;laboratory;specialized;local
+12;Antara News;press agency;general;national
+13;Arab Times;online news source;general;international
+14;ArabianBusiness;online news source;general;international
+15;Associated Press;press agency;general;international
+16;Austin Herald;online news source;general;international
+17;Avian Flu Diary;social platform;specialized;international
+18;Bangladesh Vet Auth;national vet auth.;specialized;national
+19;Belgium Vet Auth;national vet auth.;specialized;national
+20;Belgium's Federal Minister for Agriculture;national vet auth.;specialized;national
+21;Bemidji Pioneer;online news source;general;local
+22;Bengaluru Deputy Conservator of Forests;local off. auth.;specialized;local
+23;Bengaluru Vet Auth;local vet auth.;specialized;local
+24;Bhutan Vet Auth;national vet auth.;specialized;national
+25;Bhutan's National Center for Animal Health (NCAH);laboratory;specialized;national
+26;Bihar animal husbandry department;local vet auth.;specialized;local
+27;Bihar Deputy Chief Minister;local off. auth.;general;local
+28;Bihar principal chief conservator of forest ;local off. auth.;general;local
+29;Brussels Times;online news source;general;international
+30;Bulgaria Vet Auth;national vet auth.;specialized;national
+31;Bulgarian Focus Information Agency;press agency;general;national
+32;Bulgarian local authoriy;local off. auth.;general;local
+33;Bulgarian National Television;radio, TV;general;national
+34;Bulgarian officials;local off. auth.;general;local
+35;Bulgaria's National Reference Laboratory;laboratory;specialized;national
+36;Bureau of Animal and Plant Health Inspection and Quarantine (Taiwan);local off. auth.;specialized;local
+37;Business Standard;online news source;general;international
+38;California Department of Food & Agriculture;local vet auth.;specialized;local
+39;Cambodia province Auth;local off. auth.;general;local
+40;Cambodia Vet Auth;national vet auth.;specialized;national
+41;CBS Minnesota;online news source;general;local
+42;Cell Host & Microbe;research org.;specialized;international
+43;Center for Food Safety of Honk Kong;local vet auth.;specialized;local
+44;Central News Agency (Taiwan);press agency;general;national
+45;Channel NewsAsia;online news source;general;international
+46;Charlotte Observer;online news source;general;international
+47;Chief of Agricultural Service, Bandarlampung;local vet auth.;specialized;local
+48;Chief of Department of Livestock Services Dr Raya;local vet auth.;specialized;local
+49;Chief vet of the state;national vet auth.;specialized;national
+50;Chief Veterinary Officer of the Plateau State;local vet auth.;specialized;local
+51;Chilika Development Authority (India);local off. auth.;general;local
+52;China Animal Disease Control Center;national vet auth.;specialized;national
+53;China Animal Health and Epidemiolology Center;national vet auth.;specialized;national
+54;China Vet Auth;national vet auth.;specialized;national
+55;China.org.cn;online news source;general;national
+56;Chitwan district Officier;local off. auth.;general;local
+57;Chitwan veterinarian;local vet auth.;specialized;local
+58;CIDRAP;research org.;specialized;international
+59;Council of Agriculture (Taiwan);local vet auth.;specialized;local
+60;Crofsblog;social platform;specialized;international
+61;Cuttack Chief Veterinary Officer Dr Behera;local vet auth.;specialized;local
+62;Daily Mail;online news source;general;international
+63;Daily Pioneer;online news source;general;international
+64;Daily Trust;online news source;general;international
+65;Danish Veterinary and Food Administration;national vet auth.;specialized;national
+66;Deccan Chronicle;online news source;general;international
+67;Deccan Herald;online news source;general;international
+68;Delmarva Now;online news source;general;local
+69;Delmarva Poultry Industry;private company;specialized;local
+70;Delmarva Public Radio;radio, TV;general;local
+71;Denmark Vet Auth;national vet auth.;specialized;national
+72;Department of Livestock Servicies;local vet auth.;specialized;local
+73;DesMoinesRegister.com;online news source;general;international
+74;Devdiscourse;online news source;general;international
+75;Digital Globalist;online news source;general;international
+76;District Animal Husbandry Department;national vet auth.;specialized;national
+77;District Magistrate of Patna;local off. auth.;specialized;local
+78;Divisionnal commissioner;national off. auth.;general;national
+79;Dominican Republic Vet Auth;national vet auth.;specialized;national
+80;Down To Earth Magazine;online news source;general;international
+81;Dr  K. Tiwari Municipal Veterinary Service;local vet auth.;specialized;local
+82;Dr Dhakal Livestock Service Expert Center;local vet auth.;specialized;local
+83;Dr Parshuman Phuyal Chief of Veterinary Hospital (Nepal);local vet auth.;specialized;local
+84;Duluth News Tribune;online news source;general;local
+85;Durham Herald Sun;online news source;general;local
+86;Egypt Vet Auth;national vet auth.;specialized;national
+87;Egypt's veterinary official;local vet auth.;specialized;local
+88;Emirates247;online news source;general;international
+89;Epidemiologist Dr Ragini Misha;local vet auth.;specialized;local
+90;Express.co.uk;online news source;general;international
+91;FAO;international vet auth.;specialized;international
+92;FarmingUK;online news source;general;national
+93;Farms.com;online news source;general;international
+94;Feedstuffs;online news source;general;international
+95;Financial Express;online news source;general;international
+96;Financial Tribune;online news source;general;international
+97;Fisheries and Animal Ressources Developpment Department;national vet auth.;specialized;national
+98;FluTrackers;social platform;specialized;international
+99;Focus News;press agency;general;international
+100;Focus radio BG;radio, TV;general;international
+101;Focus Taiwan;press agency;general;national
+102;Foodnavigator;online news source;general;international
+103;Free Malaysia Today;online news source;general;national
+104;Gaya administrator;local off. auth.;general;local
+105;Ghana Vet Auth;national vet auth.;general;national
+106;Ghanaweb;online news source;general;national
+107;Global Times;online news source;general;international
+108;Grand Forks Herald;online news source;general;international
+109;Gulf Business News;online news source;general;international
+110;Gulf News;online news source;general;international
+111;Gulf Today;online news source;general;international
+112;Haaretz;online news source;general;international
+113;HealthMap;EBS tool;general;international
+114;HindiNews;online news source;general;national
+115;Hindustantimes;online news source;general;national
+116;Hon Dat District animal husbandry division;local vet auth.;specialized;local
+117;Independant.ie;online news source;general;international
+118;India Blooms;online news source;general;national
+119;India Chief Conservator of Forests Bihar;local off. auth.;specialized;local
+120;India District Animal Husbandry;local vet auth.;specialized;local
+121;India local vet Auth;local vet auth.;specialized;local
+122;India State Government;local off. auth.;general;local
+123;India Today;online news source;general;national
+124;India Vet Auth;national vet auth.;specialized;national
+125;India's government;national off. auth.;general;national
+126;India's ornitologists;national vet auth.;specialized;national
+127;Informante.web;online news source;general;international
+128;Inquirer.net;online news source;general;international
+129;Institut of High Security Animal Disease (NIHSAD);national vet auth.;specialized;national
+130;Iran Vet Auth;national vet auth.;specialized;national
+131;Islamabad local sources;local person;general;local
+132;Israel Vet Auth;national vet auth.;specialized;national
+133;J Infect Dis;research org.;general;international
+134;Jharkhand animal husbandry department ;local vet auth.;specialized;local
+135;Jharkhand villagers;local person;general;local
+136;kalingaTV;radio, TV;general;national
+137;Kathmandu Post;online news source;general;local
+138;KFGO News;radio, TV;general;international
+139;Khaleej Times;online news source;general;international
+140;Khmer Times;online news source;general;international
+141;KNUJ;radio, TV;general;national
+142;Korea Herald;online news source;general;national
+143;Korea's ministry of environment;national off. auth.;specialized;national
+144;Kuensel;online news source;general;international
+145;Kuwait news agency;press agency;general;national
+146;Kuwait Vet Auth;national vet auth.;specialized;national
+147;Kuwait's ministry of environment;national off. auth.;specialized;national
+148;Lang Son provincial animal health agency;local vet auth.;specialized;local
+149;Laos Vet Auth;national vet auth.;specialized;national
+150;Leader Telegram;online news source;general;international
+151;Long An Department of Agriculture and Rural Development;local vet auth.;specialized;local
+152;Lovin Dubai;online news source;general;national
+153;Luderiz Maritime Research Group;private company;specialized;local
+154;Mahakalapara locals;local person;general;local
+155;Makawanpur district officer;local off. auth.;general;local
+156;MalayMail;online news source;general;national
+157;Malaysia Vet Auth;national vet auth.;specialized;national
+158;Martha\'s Vineyard News;online news source;general;national
+159;Medibulletin;online news source;general;national
+160;MENAFN;online news source;general;international
+161;MercoPress;online news source;general;international
+162;Mexican Government Official Gazette;online news source;general;national
+163;Mexico Vet Auth;national vet auth.;specialized;national
+164;Mexico's animal health officials;local vet auth.;specialized;local
+165;Ministry of Agriculture and Livestock Development;national vet auth.;specialized;national
+166;Ministry of Fisheries and Marine Resources (Namibia);national off. auth.;specialized;national
+167;Minnesota Vet Authorities;local vet auth.;specialized;local
+168;Mongabay;online news source;general;local
+169;Munger Animal Husbandry officer;local vet auth.;specialized;local
+170;Muzzafarpur Animal Husbandry officier;local vet auth.;specialized;local
+171;Namibia Vet Auth;national vet auth.;specialized;national
+172;Namibian Government;national off. auth.;general;national
+173;Namibian officials;national off. auth.;general;national
+174;Namibia's Central Veterinary Laboratory;laboratory;specialized;national
+175;Namibia's ministery of fisheries;national vet auth.;specialized;national
+176;National Dr of Epidemic;national vet auth.;specialized;national
+177;Nawada district animal husbandry officer;local vet auth.;specialized;local
+178;NDTV;radio, TV;general;international
+179;NECN;radio, TV;general;international
+180;Nepal 24 hours;online news source;general;national
+181;Nepal Central Veterinary Laboratory;local vet auth.;specialized;local
+182;Nepal local vet authorities;local vet auth.;specialized;local
+183;Nepal Vet Auth;national vet auth.;specialized;national
+184;Nepali Sansar;online news source;general;national
+185;Nepal's Department of Livestock Services;national vet auth.;specialized;national
+186;Nepal's District Administration Office;local off. auth.;general;local
+187;New Era LIVE;online news source;general;national
+188;News Agency of Nigeria;press agency;general;national
+189;News Nation;online news source;general;national
+190;Nghe An Vet Auth;local vet auth.;specialized;local
+191;Nigeria Vet Auth;national vet auth.;specialized;national
+192;Nigeria's Health officials;national vet auth.;specialized;national
+193;NIHSAD;laboratory;specialized;national
+194;Novinite.com (Sofia News Agency);press agency;general;international
+195;NYOOOZ;social platform;general;international
+196;Odisha Agriculture Minister;local vet auth.;specialized;local
+197;Odisha Fisheries and Animal Resources Development department ;local vet auth.;specialized;local
+198;Odisha Bytes;online news source;general;local
+199;Odisha News Insight;online news source;general;local
+200;Odisha Television Ltd;radio, TV;general;local
+201;OIE;international vet auth.;specialized;international
+202;OrissaPOST;online news source;general;local
+203;Outbreak News Today;online news source;specialized;international
+204;PADI-web;EBS tool;specialized;international
+205;Pakistan Today;online news source;general;national
+206;Pakistan Vet Auth;national vet auth.;specialized;national
+207;Paradip District Veterinary Officer ;local vet auth.;specialized;local
+208;Patna Daily;online news source;general;local
+209;Patna laboratory;laboratory;specialized;local
+210;Patna state animal and fisheries resources department;local vet auth.;specialized;local
+211;Patna Zoo Director;local off. auth.;general;local
+212;Phys.org;online news source;general;international
+213;Physician's Weekly;online news source;general;international
+214;Pioneer Press;online news source;general;international
+215;PLUS TV Africa;radio, TV;general;international
+216;Portland Press Herald;online news source;general;local
+217;Pragativadi;online news source;general;international
+218;Premium Times;online news source;general;international
+219;Prensa Latina;press agency;general;international
+220;Press Trust of India;online news source;general;national
+221;ProMED;EBS tool;specialized;international
+222;Publication authors;online news source;general;international
+223;Pulse.ng;online news source;general;international
+224;Puri assistant district veterinary officer;local vet auth.;specialized;local
+225;Puri Chief District Veterinary Officer;local vet auth.;specialized;local
+226;Quang Nam agriculture center;local vet auth.;specialized;local
+227;Quang Ninh animal health bureau ;local vet auth.;specialized;local
+228;Ranchi zoo vet;local vet auth.;specialized;local
+229;Regional Diseases Diagnotic Laboratory;laboratory;specialized;local
+230;Reuters;press agency;general;international
+231;Russia Vet Auth;national vet auth.;specialized;national
+232;Sabah Veterinary Services Department;local vet auth.;specialized;local
+233;Sabbah Vet Auth;local vet auth.;specialized;local
+234;Salisbury Animal Health Laboratory;laboratory;specialized;local
+235;Salisbury Daily Times;online news source;general;local
+236;Saudi Arabia Vet Auth;national vet auth.;specialized;national
+237;Saudi Gazette;online news source;general;national
+238;Saudi Press Agency;press agency;general;national
+239;SC Times;online news source;general;international
+240;SeeNews;online news source;general;international
+241;Sentinel and Enterprise;online news source;general;international
+242;Setopati;online news source;general;international
+243;Shine News;online news source;general;international
+244;South Africa Vet Auth;national vet auth.;specialized;national
+245;South African officials;national off. auth.;general;national
+246;South Korea Vet Auth;national vet auth.;specialized;national
+247;Star Tribune;online news source;general;international
+248;Superior Telegram;online news source;general;international
+249;Taipei Times;online news source;general;local
+250;Taiwan Animal Disease Control Center;national vet auth.;specialized;national
+251;Taiwan Animal Health Research Institute;national vet auth.;specialized;national
+252;Taiwan News;online news source;general;national
+253;Taiwan Vet Auth;national vet auth.;specialized;national
+254;Taiwanese officials;local off. auth.;general;local
+255;Taiwan's Council of Agriculture;national vet auth.;specialized;national
+256;Telegraph India;online news source;general;national
+257;The Borneo Post;online news source;general;national
+258;The Boston Globe;online news source;general;local
+259;The Cambodia Daily;online news source;general;local
+260;The Chilika Development Auth;local off. auth.;general;local
+261;The Eagle Online;online news source;general;international
+262;The Edge Markets MY;online news source;general;international
+263;The Globe;online news source;general;international
+264;The Himalayan Times;online news source;general;local
+265;The Hindu;online news source;general;national
+266;The Hindu Business Line;online news source;general;national
+267;The Malaysian Insight;online news source;general;national
+268;The Moveefy;online news source;general;national
+269;The Namibian;online news source;general;national
+270;The New Indian Express;online news source;general;national
+271;The Poultry Site;online news source;specialized;international
+272;The Punch;online news source;general;national
+273;The Sofia Globe;online news source;general;local
+274;The Star Online;online news source;general;international
+275;The Strait Times;online news source;general;international
+276;The Sun Daily;online news source;general;international
+277;The Telegraph;online news source;general;international
+278;The Tribune;online news source;general;international
+279;The World News;online news source;general;international
+280;Times of India;online news source;general;national
+281;Times of Israel;online news source;general;national
+282;Times Record;online news source;general;international
+283;Today.ng;online news source;general;national
+284;Tribune India;online news source;general;national
+285;Trust.org;online news source;general;national
+286;Twitter;social platform;general;international
+287;UAE Environmental Ministry;national off. auth.;specialized;national
+288;UAE Ministery of Climate Change and Environment;national off. auth.;specialized;national
+289;UAE Vet Auth;national vet auth.;specialized;national
+290;Union Minister of State for Environment;local vet auth.;specialized;local
+291;United News of India;press agency;general;national
+292;unnamed;online news source;general;international
+293;US official auth.;national off. auth.;general;national
+294;US Vet Auth;national vet auth.;specialized;national
+295;USA National Oceanic and Atmospheric Administration;research org.;specialized;national
+296;USDA;national vet auth.;specialized;national
+297;Vietnam Animal Health Agency;national vet auth.;specialized;national
+298;Vietnam Vet Auth;national vet auth.;specialized;national
+299;Vietnam disctrict's Agricultural Technique Center;local vet auth.;specialized;local
+300;Vietnam Plus;online news source;general;national
+301;VietnamNews;online news source;general;national
+302;VnExpress International;online news source;general;international
+303;WATTAgNet;online news source;specialized;international
+304;West Central Tribune;online news source;general;local
+305;Whatsapp;social platform;general;international
+306;WHTC News;radio, TV;general;international
+307;WNAX;radio, TV;general;international
+308;WSAU;radio, TV;general;international
+309;Xinhua;press agency;general;international
+310;Yahoo News;online news source;general;international
+311;Yonhap News;press agency;general;international
+312;Zeenews;online news source;general;international
+313;zoo director;local person;specialized;local
+314;The Indian Tribune;online news source;general;national
+315;WGME;press agency;general;local
