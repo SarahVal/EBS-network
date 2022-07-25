@@ -1,0 +1,444 @@
+"receptor_id";"emitter_id";"receptor_name";"emitter_name";"value"
+"94";"1";"allAfrica";"The Namibian";1
+"3";"1";"PADI-web";"The Namibian";4
+"3";"10";"PADI-web";"Pioneer Press";1
+"3";"100";"PADI-web";"The Eagle Online";1
+"3";"101";"PADI-web";"Odisha Bytes";1
+"22";"102";"Xinhua";"Center for Food Safety of Honk Kong";1
+"46";"102";"Foodnavigator";"Center for Food Safety of Honk Kong";1
+"3";"103";"PADI-web";"CBS Minnesota";1
+"3";"104";"PADI-web";"Haaretz";1
+"3";"105";"PADI-web";"ArabianBusiness";3
+"3";"106";"PADI-web";"Deccan Chronicle";1
+"3";"107";"PADI-web";"Inquirer.net";1
+"3";"108";"PADI-web";"Gulf Business News";3
+"3";"109";"PADI-web";"India Blooms";1
+"3";"11";"PADI-web";"CIDRAP";78
+"51";"11";"The Cambodia Daily";"CIDRAP";1
+"38";"11";"The Poultry Site";"CIDRAP";1
+"3";"110";"PADI-web";"Financial Tribune";1
+"3";"111";"PADI-web";"Gulf Today";2
+"3";"112";"PADI-web";"Express.co.uk";1
+"3";"113";"PADI-web";"KFGO News";2
+"3";"114";"PADI-web";"Times of Israel";1
+"3";"115";"PADI-web";"Patna Daily";1
+"45";"116";"Medibulletin";"Cell Host & Microbe";1
+"3";"117";"PADI-web";"Digital Globalist";1
+"3";"118";"PADI-web";"Pragativadi";1
+"3";"119";"PADI-web";"WSAU";3
+"32";"12";"Devdiscourse";"OIE";4
+"106";"12";"Deccan Chronicle";"OIE";1
+"105";"12";"ArabianBusiness";"OIE";1
+"107";"12";"Inquirer.net";"OIE";1
+"36";"12";"Reuters";"OIE";12
+"102";"12";"Center for Food Safety of Honk Kong";"OIE";2
+"110";"12";"Financial Tribune";"OIE";1
+"11";"12";"CIDRAP";"OIE";69
+"103";"12";"CBS Minnesota";"OIE";1
+"22";"12";"Xinhua";"OIE";1
+"112";"12";"Express.co.uk";"OIE";1
+"35";"12";"Avian Flu Diary";"OIE";1
+"113";"12";"KFGO News";"OIE";1
+"108";"12";"Gulf Business News";"OIE";2
+"84";"12";"Associated Press";"OIE";4
+"109";"12";"India Blooms";"OIE";1
+"43";"12";"Feedstuffs";"OIE";1
+"114";"12";"Times of Israel";"OIE";1
+"70";"12";"UAE Ministery of Climate Change and Environment";"OIE";8
+"104";"12";"Haaretz";"OIE";1
+"111";"12";"Gulf Today";"OIE";1
+"38";"12";"The Poultry Site";"OIE";2
+"12";"12";"OIE";"OIE";1
+"13";"12";"WATTAgNet";"OIE";20
+"3";"120";"PADI-web";"Independant.ie";4
+"3";"121";"PADI-web";"Agriculture.com";2
+"3";"122";"PADI-web";"The Strait Times";2
+"3";"123";"PADI-web";"Physician's Weekly";2
+"3";"124";"PADI-web";"Trust.org";2
+"3";"125";"PADI-web";"WHTC News";1
+"3";"126";"PADI-web";"Agriland";1
+"3";"127";"PADI-web";"Free Malaysia Today";1
+"3";"128";"PADI-web";"The Star Online";3
+"3";"129";"PADI-web";"MalayMail";1
+"3";"13";"PADI-web";"WATTAgNet";31
+"3";"130";"PADI-web";"The Malaysian Insight";2
+"3";"131";"PADI-web";"The Sun Daily";1
+"133";"132";"Delmarva Public Radio";"Salisbury Daily Times";1
+"3";"133";"PADI-web";"Delmarva Public Radio";1
+"135";"134";"Saudi Gazette";"Saudi Press Agency";1
+"3";"135";"PADI-web";"Saudi Gazette";1
+"137";"136";"Korea Herald";"Yonhap News";3
+"3";"136";"PADI-web";"Yonhap News";4
+"3";"137";"PADI-web";"Korea Herald";4
+"41";"138";"Focus Taiwan";"Bureau of Animal and Plant Health Inspection and Quarantine (Taiwan)";2
+"42";"138";"Taiwan News";"Bureau of Animal and Plant Health Inspection and Quarantine (Taiwan)";1
+"3";"139";"PADI-web";"Gulf News";2
+"3";"14";"PADI-web";"Brussels Times";1
+"13";"14";"WATTAgNet";"Brussels Times";1
+"3";"140";"PADI-web";"Lovin Dubai";1
+"3";"141";"PADI-web";"Khaleej Times";1
+"139";"142";"Gulf News";"UAE Environmental Ministry";1
+"3";"143";"PADI-web";"Emirates247";1
+"3";"144";"PADI-web";"Odisha News Insight";1
+"3";"145";"PADI-web";"Portland Press Herald";1
+"3";"146";"PADI-web";"Martha\'s Vineyard News";1
+"3";"147";"PADI-web";"Durham Herald Sun";1
+"3";"148";"PADI-web";"Charlotte Observer";1
+"3";"149";"PADI-web";"Times Record";1
+"3";"15";"PADI-web";"FarmingUK";2
+"3";"150";"PADI-web";"The Boston Globe";1
+"3";"151";"PADI-web";"NECN";1
+"3";"152";"PADI-web";"Phys.org";1
+"3";"153";"PADI-web";"MENAFN";1
+"3";"154";"PADI-web";"China.org.cn";2
+"1";"155";"The Namibian";"Acting Chief Veterinary Officier";1
+"2";"155";"Informante.web";"Acting Chief Veterinary Officier";1
+"4";"156";"Arab Times";"Al-Rai Daily";1
+"12";"157";"OIE";"Bangladesh Vet Auth";1
+"15";"158";"FarmingUK";"Belgium Vet Auth";1
+"13";"158";"WATTAgNet";"Belgium Vet Auth";1
+"14";"158";"Brussels Times";"Belgium Vet Auth";2
+"16";"159";"Grand Forks Herald";"Bemidji Pioneer";1
+"3";"159";"PADI-web";"Bemidji Pioneer";1
+"3";"16";"PADI-web";"Grand Forks Herald";1
+"17";"160";"Deccan Herald";"Bengaluru Deputy Conservator of Forests";1
+"18";"161";"Bhutan Vet Auth";"Bhutan's National Center for Animal Health (NCAH)";1
+"20";"162";"The New Indian Express";"Bihar animal husbandry department";1
+"25";"162";"Telegraph India";"Bihar animal husbandry department";1
+"26";"162";"Financial Express";"Bihar animal husbandry department";1
+"5";"162";"Down To Earth Magazine";"Bihar animal husbandry department";1
+"21";"162";"India Today";"Bihar animal husbandry department";1
+"23";"162";"Press Trust of India";"Bihar animal husbandry department";1
+"22";"162";"Xinhua";"Bihar animal husbandry department";2
+"24";"162";"Times of India";"Bihar animal husbandry department";4
+"27";"163";"Business Standard";"Bihar Deputy Chief Minister";1
+"24";"163";"Times of India";"Bihar Deputy Chief Minister";1
+"24";"164";"Times of India";"Bihar principal chief conservator of forest";1
+"28";"165";"Bulgaria Vet Auth";"Bulgaria's National Reference Laboratory";2
+"40";"166";"Focus radio BG";"Bulgarian local authoriy";1
+"43";"167";"Feedstuffs";"California Department of Food & Agriculture";4
+"44";"168";"Khmer Times";"Cambodia province Auth";1
+"13";"169";"WATTAgNet";"Cambodia Vet Auth";1
+"12";"169";"OIE";"Cambodia Vet Auth";6
+"3";"17";"PADI-web";"Deccan Herald";3
+"20";"170";"The New Indian Express";"Chilika Development Authority (India)";1
+"41";"171";"Focus Taiwan";"China Animal Disease Control Center";1
+"36";"172";"Reuters";"China Animal Health and Epidemiolology Center";4
+"32";"172";"Devdiscourse";"China Animal Health and Epidemiolology Center";2
+"49";"172";"Global Times";"China Animal Health and Epidemiolology Center";1
+"35";"173";"Avian Flu Diary";"China Vet Auth";1
+"50";"173";"Shine News";"China Vet Auth";1
+"12";"173";"OIE";"China Vet Auth";3
+"36";"173";"Reuters";"China Vet Auth";15
+"32";"173";"Devdiscourse";"China Vet Auth";1
+"33";"173";"Channel NewsAsia";"China Vet Auth";1
+"47";"174";"Setopati";"Chitwan district Officier";1
+"47";"175";"Setopati";"Chitwan veterinarian";1
+"13";"176";"WATTAgNet";"Danish Veterinary and Food Administration";1
+"53";"177";"Delmarva Now";"Delmarva Poultry Industry";1
+"12";"178";"OIE";"Denmark Vet Auth";4
+"24";"179";"Times of India";"District Magistrate of Patna";1
+"12";"18";"OIE";"Bhutan Vet Auth";2
+"19";"18";"Kuensel";"Bhutan Vet Auth";1
+"57";"180";"Prensa Latina";"Dominican Republic Vet Auth";1
+"12";"180";"OIE";"Dominican Republic Vet Auth";3
+"47";"181";"Setopati";"Dr Dhakal Livestock Service Expert Center";1
+"56";"182";"The Himalayan Times";"Dr Parshuman Phuyal Chief of Veterinary Hospital (Nepal)";1
+"58";"183";"FluTrackers";"Egypt Vet Auth";1
+"35";"183";"Avian Flu Diary";"Egypt Vet Auth";1
+"59";"184";"Hindustantimes";"Epidemiologist Dr Ragini Misha";1
+"60";"185";"Vietnam Plus";"Hon Dat District animal husbandry division";1
+"61";"186";"Daily Pioneer";"India's ornitologists";1
+"63";"187";"The Hindu";"India Chief Conservator of Forests Bihar";2
+"64";"187";"News Nation";"India Chief Conservator of Forests Bihar";1
+"62";"187";"Yahoo News";"India Chief Conservator of Forests Bihar";1
+"20";"187";"The New Indian Express";"India Chief Conservator of Forests Bihar";1
+"17";"187";"Deccan Herald";"India Chief Conservator of Forests Bihar";1
+"63";"188";"The Hindu";"India State Government";1
+"66";"189";"Odisha Television Ltd";"India Vet Auth";1
+"12";"189";"OIE";"India Vet Auth";6
+"3";"19";"PADI-web";"Kuensel";1
+"13";"19";"WATTAgNet";"Kuensel";1
+"68";"190";"Cuttack Chief Veterinary Officer Dr Behera";"Institut of High Security Animal Disease (NIHSAD)";1
+"67";"190";"India District Animal Husbandry";"Institut of High Security Animal Disease (NIHSAD)";2
+"24";"190";"Times of India";"Institut of High Security Animal Disease (NIHSAD)";1
+"59";"190";"Hindustantimes";"Institut of High Security Animal Disease (NIHSAD)";1
+"69";"190";"Animal Disease Research Laboratory of Cuttack";"Institut of High Security Animal Disease (NIHSAD)";1
+"5";"190";"Down To Earth Magazine";"Institut of High Security Animal Disease (NIHSAD)";1
+"12";"191";"OIE";"Iran Vet Auth";9
+"12";"192";"OIE";"Israel Vet Auth";6
+"11";"193";"CIDRAP";"J Infect Dis";1
+"25";"194";"Telegraph India";"Jharkhand animal husbandry department";1
+"70";"195";"UAE Ministery of Climate Change and Environment";"Kuwait Vet Auth";1
+"12";"195";"OIE";"Kuwait Vet Auth";6
+"60";"196";"Vietnam Plus";"Lang Son provincial animal health agency";1
+"12";"197";"OIE";"Laos Vet Auth";1
+"44";"198";"Khmer Times";"Long An Department of Agriculture and Rural Development";1
+"22";"198";"Xinhua";"Long An Department of Agriculture and Rural Development";1
+"1";"199";"The Namibian";"Luderiz Maritime Research Group";2
+"3";"2";"PADI-web";"Informante.web";2
+"3";"20";"PADI-web";"The New Indian Express";10
+"38";"200";"The Poultry Site";"Makawanpur district officer";1
+"71";"200";"Nepal 24 hours";"Makawanpur district officer";1
+"56";"200";"The Himalayan Times";"Makawanpur district officer";1
+"36";"201";"Reuters";"Malaysia Vet Auth";2
+"12";"201";"OIE";"Malaysia Vet Auth";7
+"73";"201";"The Borneo Post";"Malaysia Vet Auth";1
+"72";"201";"The Edge Markets MY";"Malaysia Vet Auth";1
+"74";"202";"MercoPress";"Mexican Government Official Gazette";1
+"36";"202";"Reuters";"Mexican Government Official Gazette";1
+"12";"203";"OIE";"Mexico Vet Auth";9
+"75";"204";"Chief of Department of Livestock Services Dr Raya";"Ministry of Agriculture and Livestock Development";1
+"76";"205";"PLUS TV Africa";"Ministry of Fisheries and Marine Resources (Namibia)";1
+"77";"205";"New Era LIVE";"Ministry of Fisheries and Marine Resources (Namibia)";2
+"84";"206";"Associated Press";"Minnesota Vet Authorities";2
+"6";"206";"DesMoinesRegister.com";"Minnesota Vet Authorities";1
+"87";"206";"The Globe";"Minnesota Vet Authorities";1
+"80";"206";"Outbreak News Today";"Minnesota Vet Authorities";1
+"83";"206";"Duluth News Tribune";"Minnesota Vet Authorities";1
+"86";"206";"Farms.com";"Minnesota Vet Authorities";1
+"16";"206";"Grand Forks Herald";"Minnesota Vet Authorities";1
+"79";"206";"AG Week";"Minnesota Vet Authorities";2
+"81";"206";"WNAX";"Minnesota Vet Authorities";1
+"82";"206";"West Central Tribune";"Minnesota Vet Authorities";2
+"43";"206";"Feedstuffs";"Minnesota Vet Authorities";2
+"85";"206";"Superior Telegram";"Minnesota Vet Authorities";1
+"78";"206";"SC Times";"Minnesota Vet Authorities";2
+"13";"207";"WATTAgNet";"Mongabay";1
+"22";"208";"Xinhua";"Munger Animal Husbandry officer";1
+"5";"208";"Down To Earth Magazine";"Munger Animal Husbandry officer";1
+"88";"208";"NDTV";"Munger Animal Husbandry officer";1
+"24";"208";"Times of India";"Munger Animal Husbandry officer";2
+"89";"209";"Tribune India";"Muzzafarpur Animal Husbandry officier";1
+"63";"209";"The Hindu";"Muzzafarpur Animal Husbandry officier";1
+"38";"21";"The Poultry Site";"India Today";1
+"3";"21";"PADI-web";"India Today";1
+"90";"210";"Namibia Vet Auth";"Namibia's Central Veterinary Laboratory";1
+"24";"211";"Times of India";"Nawada district animal husbandry officer";1
+"56";"212";"The Himalayan Times";"Nepal's District Administration Office";1
+"93";"213";"Department of Livestock Servicies";"Nepal Central Veterinary Laboratory";2
+"48";"214";"Kathmandu Post";"Nepal local vet authorities";1
+"12";"215";"OIE";"Nepal Vet Auth";5
+"98";"216";"VnExpress International";"Nghe An Vet Auth";1
+"12";"217";"OIE";"Nigeria Vet Auth";6
+"99";"217";"News Agency of Nigeria";"Nigeria Vet Auth";6
+"100";"217";"The Eagle Online";"Nigeria Vet Auth";1
+"88";"218";"NDTV";"Odisha Agriculture Minister";1
+"66";"218";"Odisha Television Ltd";"Odisha Agriculture Minister";1
+"25";"219";"Telegraph India";"Odisha Fisheries and Animal Resources Development department";1
+"27";"219";"Business Standard";"Odisha Fisheries and Animal Resources Development department";1
+"66";"219";"Odisha Television Ltd";"Odisha Fisheries and Animal Resources Development department";4
+"101";"219";"Odisha Bytes";"Odisha Fisheries and Animal Resources Development department";1
+"88";"219";"NDTV";"Odisha Fisheries and Animal Resources Development department";1
+"61";"219";"Daily Pioneer";"Odisha Fisheries and Animal Resources Development department";2
+"20";"219";"The New Indian Express";"Odisha Fisheries and Animal Resources Development department";1
+"24";"219";"Times of India";"Odisha Fisheries and Animal Resources Development department";1
+"63";"219";"The Hindu";"Odisha Fisheries and Animal Resources Development department";1
+"3";"22";"PADI-web";"Xinhua";11
+"154";"22";"China.org.cn";"Xinhua";2
+"3";"220";"PADI-web";"OrissaPOST";1
+"3";"221";"PADI-web";"Pakistan Today";1
+"12";"222";"OIE";"Pakistan Vet Auth";1
+"20";"223";"The New Indian Express";"Paradip District Veterinary Officer";1
+"24";"224";"Times of India";"Patna laboratory";1
+"24";"225";"Times of India";"Patna state animal and fisheries resources department";1
+"20";"225";"The New Indian Express";"Patna state animal and fisheries resources department";1
+"116";"226";"Cell Host & Microbe";"Publication authors";1
+"117";"227";"Digital Globalist";"Puri assistant district veterinary officer";1
+"66";"228";"Odisha Television Ltd";"Puri Chief District Veterinary Officer";1
+"118";"228";"Pragativadi";"Puri Chief District Veterinary Officer";1
+"24";"228";"Times of India";"Puri Chief District Veterinary Officer";1
+"25";"228";"Telegraph India";"Puri Chief District Veterinary Officer";1
+"27";"228";"Business Standard";"Puri Chief District Veterinary Officer";1
+"22";"229";"Xinhua";"Quang Ninh animal health bureau";2
+"11";"23";"CIDRAP";"Press Trust of India";1
+"7";"230";"Star Tribune";"Russia Vet Auth";2
+"12";"230";"OIE";"Russia Vet Auth";5
+"126";"230";"Agriland";"Russia Vet Auth";1
+"15";"230";"FarmingUK";"Russia Vet Auth";1
+"38";"230";"The Poultry Site";"Russia Vet Auth";1
+"127";"231";"Free Malaysia Today";"Sabbah Vet Auth";1
+"130";"231";"The Malaysian Insight";"Sabbah Vet Auth";1
+"128";"231";"The Star Online";"Sabbah Vet Auth";3
+"107";"231";"Inquirer.net";"Sabbah Vet Auth";1
+"129";"231";"MalayMail";"Sabbah Vet Auth";1
+"73";"231";"The Borneo Post";"Sabbah Vet Auth";3
+"131";"231";"The Sun Daily";"Sabbah Vet Auth";1
+"132";"232";"Salisbury Daily Times";"Salisbury Animal Health Laboratory";1
+"134";"233";"Saudi Press Agency";"Saudi Arabia Vet Auth";1
+"12";"234";"OIE";"South Africa Vet Auth";5
+"12";"235";"OIE";"South African officials";1
+"137";"236";"Korea Herald";"South Korea Vet Auth";1
+"136";"236";"Yonhap News";"South Korea Vet Auth";7
+"3";"237";"PADI-web";"Taipei Times";1
+"41";"238";"Focus Taiwan";"Taiwan Animal Disease Control Center";2
+"42";"238";"Taiwan News";"Taiwan Animal Disease Control Center";1
+"138";"239";"Bureau of Animal and Plant Health Inspection and Quarantine (Taiwan)";"Taiwan Vet Auth";2
+"12";"239";"OIE";"Taiwan Vet Auth";16
+"42";"239";"Taiwan News";"Taiwan Vet Auth";2
+"41";"239";"Focus Taiwan";"Taiwan Vet Auth";2
+"3";"24";"PADI-web";"Times of India";30
+"20";"240";"The New Indian Express";"The Chilika Development Auth";1
+"3";"241";"PADI-web";"The Hindu Business Line";1
+"27";"242";"Business Standard";"Union Minister of State for Environment";1
+"144";"243";"Odisha News Insight";"unnamed";1
+"36";"243";"Reuters";"unnamed";2
+"130";"243";"The Malaysian Insight";"unnamed";1
+"13";"244";"WATTAgNet";"US Vet Auth";1
+"12";"244";"OIE";"US Vet Auth";16
+"43";"244";"Feedstuffs";"US Vet Auth";1
+"150";"245";"The Boston Globe";"USA National Oceanic and Atmospheric Administration";1
+"152";"245";"Phys.org";"USA National Oceanic and Atmospheric Administration";1
+"84";"245";"Associated Press";"USA National Oceanic and Atmospheric Administration";1
+"151";"245";"NECN";"USA National Oceanic and Atmospheric Administration";1
+"146";"245";"Martha\'s Vineyard News";"USA National Oceanic and Atmospheric Administration";1
+"148";"245";"Charlotte Observer";"USA National Oceanic and Atmospheric Administration";1
+"149";"245";"Times Record";"USA National Oceanic and Atmospheric Administration";1
+"145";"245";"Portland Press Herald";"USA National Oceanic and Atmospheric Administration";1
+"147";"245";"Durham Herald Sun";"USA National Oceanic and Atmospheric Administration";1
+"153";"246";"MENAFN";"Vietnam disctrict's Agricultural Technique Center";1
+"22";"246";"Xinhua";"Vietnam disctrict's Agricultural Technique Center";1
+"12";"247";"OIE";"Vietnam Vet Auth";7
+"11";"247";"CIDRAP";"Vietnam Vet Auth";1
+"3";"25";"PADI-web";"Telegraph India";5
+"3";"26";"PADI-web";"Financial Express";1
+"3";"27";"PADI-web";"Business Standard";5
+"36";"28";"Reuters";"Bulgaria Vet Auth";14
+"38";"28";"The Poultry Site";"Bulgaria Vet Auth";1
+"22";"28";"Xinhua";"Bulgaria Vet Auth";2
+"33";"28";"Channel NewsAsia";"Bulgaria Vet Auth";1
+"37";"28";"Novinite.com (Sofia News Agency)";"Bulgaria Vet Auth";1
+"31";"28";"Focus News";"Bulgaria Vet Auth";1
+"35";"28";"Avian Flu Diary";"Bulgaria Vet Auth";1
+"12";"28";"OIE";"Bulgaria Vet Auth";9
+"39";"28";"Bulgarian Focus Information Agency";"Bulgaria Vet Auth";1
+"29";"28";"Bulgarian National Television";"Bulgaria Vet Auth";4
+"30";"28";"SeeNews";"Bulgaria Vet Auth";1
+"34";"28";"The Sofia Globe";"Bulgaria Vet Auth";1
+"32";"28";"Devdiscourse";"Bulgaria Vet Auth";1
+"31";"29";"Focus News";"Bulgarian National Television";2
+"37";"29";"Novinite.com (Sofia News Agency)";"Bulgarian National Television";2
+"3";"30";"PADI-web";"SeeNews";1
+"3";"31";"PADI-web";"Focus News";4
+"3";"32";"PADI-web";"Devdiscourse";9
+"3";"33";"PADI-web";"Channel NewsAsia";4
+"3";"34";"PADI-web";"The Sofia Globe";1
+"11";"35";"CIDRAP";"Avian Flu Diary";5
+"119";"36";"WSAU";"Reuters";3
+"113";"36";"KFGO News";"Reuters";1
+"11";"36";"CIDRAP";"Reuters";1
+"123";"36";"Physician's Weekly";"Reuters";2
+"32";"36";"Devdiscourse";"Reuters";1
+"120";"36";"Independant.ie";"Reuters";4
+"38";"36";"The Poultry Site";"Reuters";2
+"121";"36";"Agriculture.com";"Reuters";2
+"3";"36";"PADI-web";"Reuters";27
+"122";"36";"The Strait Times";"Reuters";2
+"62";"36";"Yahoo News";"Reuters";1
+"125";"36";"WHTC News";"Reuters";1
+"124";"36";"Trust.org";"Reuters";2
+"33";"36";"Channel NewsAsia";"Reuters";2
+"3";"37";"PADI-web";"Novinite.com (Sofia News Agency)";4
+"3";"38";"PADI-web";"The Poultry Site";11
+"31";"39";"Focus News";"Bulgarian Focus Information Agency";1
+"3";"4";"PADI-web";"Arab Times";1
+"37";"40";"Novinite.com (Sofia News Agency)";"Focus radio BG";1
+"3";"41";"PADI-web";"Focus Taiwan";7
+"3";"42";"PADI-web";"Taiwan News";5
+"3";"43";"PADI-web";"Feedstuffs";8
+"3";"44";"PADI-web";"Khmer Times";2
+"3";"45";"PADI-web";"Medibulletin";1
+"3";"46";"PADI-web";"Foodnavigator";1
+"3";"47";"PADI-web";"Setopati";5
+"3";"48";"PADI-web";"Kathmandu Post";5
+"3";"49";"PADI-web";"Global Times";1
+"3";"5";"PADI-web";"Down To Earth Magazine";5
+"3";"50";"PADI-web";"Shine News";1
+"3";"51";"PADI-web";"The Cambodia Daily";1
+"3";"52";"PADI-web";"NYOOOZ";1
+"3";"53";"PADI-web";"Delmarva Now";1
+"48";"54";"Kathmandu Post";"Dr  K. Tiwari Municipal Veterinary Service";1
+"3";"55";"PADI-web";"Nepali Sansar";1
+"3";"56";"PADI-web";"The Himalayan Times";4
+"3";"57";"PADI-web";"Prensa Latina";1
+"11";"58";"CIDRAP";"FluTrackers";1
+"3";"59";"PADI-web";"Hindustantimes";5
+"3";"6";"PADI-web";"DesMoinesRegister.com";2
+"3";"60";"PADI-web";"Vietnam Plus";2
+"3";"61";"PADI-web";"Daily Pioneer";6
+"3";"62";"PADI-web";"Yahoo News";2
+"3";"63";"PADI-web";"The Hindu";3
+"3";"64";"PADI-web";"News Nation";1
+"17";"65";"Deccan Herald";"Patna Zoo Director";1
+"24";"65";"Times of India";"Patna Zoo Director";4
+"115";"65";"Patna Daily";"Patna Zoo Director";1
+"35";"65";"Avian Flu Diary";"Patna Zoo Director";1
+"3";"66";"PADI-web";"Odisha Television Ltd";10
+"22";"67";"Xinhua";"India District Animal Husbandry";1
+"59";"67";"Hindustantimes";"India District Animal Husbandry";2
+"65";"67";"Patna Zoo Director";"India District Animal Husbandry";1
+"61";"67";"Daily Pioneer";"India District Animal Husbandry";2
+"25";"67";"Telegraph India";"India District Animal Husbandry";1
+"24";"67";"Times of India";"India District Animal Husbandry";6
+"20";"68";"The New Indian Express";"Cuttack Chief Veterinary Officer Dr Behera";1
+"52";"68";"NYOOOZ";"Cuttack Chief Veterinary Officer Dr Behera";1
+"27";"68";"Business Standard";"Cuttack Chief Veterinary Officer Dr Behera";1
+"5";"69";"Down To Earth Magazine";"Animal Disease Research Laboratory of Cuttack";1
+"3";"7";"PADI-web";"Star Tribune";5
+"142";"70";"UAE Environmental Ministry";"UAE Ministery of Climate Change and Environment";1
+"139";"70";"Gulf News";"UAE Ministery of Climate Change and Environment";1
+"141";"70";"Khaleej Times";"UAE Ministery of Climate Change and Environment";1
+"108";"70";"Gulf Business News";"UAE Ministery of Climate Change and Environment";1
+"38";"70";"The Poultry Site";"UAE Ministery of Climate Change and Environment";1
+"105";"70";"ArabianBusiness";"UAE Ministery of Climate Change and Environment";2
+"140";"70";"Lovin Dubai";"UAE Ministery of Climate Change and Environment";1
+"111";"70";"Gulf Today";"UAE Ministery of Climate Change and Environment";1
+"143";"70";"Emirates247";"UAE Ministery of Climate Change and Environment";1
+"3";"71";"PADI-web";"Nepal 24 hours";1
+"3";"72";"PADI-web";"The Edge Markets MY";1
+"3";"73";"PADI-web";"The Borneo Post";4
+"3";"74";"PADI-web";"MercoPress";1
+"47";"75";"Setopati";"Chief of Department of Livestock Services Dr Raya";2
+"48";"75";"Kathmandu Post";"Chief of Department of Livestock Services Dr Raya";2
+"3";"76";"PADI-web";"PLUS TV Africa";1
+"3";"77";"PADI-web";"New Era LIVE";2
+"94";"77";"allAfrica";"New Era LIVE";1
+"3";"78";"PADI-web";"SC Times";2
+"3";"79";"PADI-web";"AG Week";2
+"3";"8";"PADI-web";"Austin Herald";1
+"3";"80";"PADI-web";"Outbreak News Today";1
+"3";"81";"PADI-web";"WNAX";1
+"3";"82";"PADI-web";"West Central Tribune";2
+"3";"83";"PADI-web";"Duluth News Tribune";1
+"9";"84";"Sentinel and Enterprise";"Associated Press";1
+"7";"84";"Star Tribune";"Associated Press";3
+"8";"84";"Austin Herald";"Associated Press";1
+"10";"84";"Pioneer Press";"Associated Press";1
+"6";"84";"DesMoinesRegister.com";"Associated Press";1
+"3";"85";"PADI-web";"Superior Telegram";1
+"3";"86";"PADI-web";"Farms.com";1
+"3";"87";"PADI-web";"The Globe";1
+"3";"88";"PADI-web";"NDTV";5
+"3";"89";"PADI-web";"Tribune India";1
+"3";"9";"PADI-web";"Sentinel and Enterprise";1
+"1";"90";"The Namibian";"Namibia Vet Auth";2
+"12";"90";"OIE";"Namibia Vet Auth";2
+"22";"90";"Xinhua";"Namibia Vet Auth";1
+"91";"90";"African Daily Voice";"Namibia Vet Auth";1
+"77";"90";"New Era LIVE";"Namibia Vet Auth";1
+"92";"90";"Namibian Government";"Namibia Vet Auth";1
+"2";"90";"Informante.web";"Namibia Vet Auth";1
+"3";"91";"PADI-web";"African Daily Voice";1
+"54";"93";"Dr  K. Tiwari Municipal Veterinary Service";"Department of Livestock Servicies";1
+"55";"93";"Nepali Sansar";"Department of Livestock Servicies";1
+"56";"93";"The Himalayan Times";"Department of Livestock Servicies";1
+"48";"93";"Kathmandu Post";"Department of Livestock Servicies";1
+"3";"94";"PADI-web";"allAfrica";3
+"3";"95";"PADI-web";"Premium Times";1
+"94";"95";"allAfrica";"Premium Times";1
+"3";"96";"PADI-web";"The Punch";3
+"3";"97";"PADI-web";"Daily Trust";1
+"3";"98";"PADI-web";"VnExpress International";1
+"96";"99";"The Punch";"News Agency of Nigeria";3
+"97";"99";"Daily Trust";"News Agency of Nigeria";1
+"95";"99";"Premium Times";"News Agency of Nigeria";2

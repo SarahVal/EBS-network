@@ -6,7 +6,7 @@
 #install_github("jokergoo/ComplexHeatmap")
 library("circlize") # for circular layout
 library("RColorBrewer") # for importing colors
-library(ComplexHeatmap) # for legend
+suppressPackageStartupMessages(library(ComplexHeatmap))# for legend
 library(dplyr)
 library(stringr)
 # ==============================================================
@@ -196,6 +196,7 @@ prepare.input.for.chord.diagram = function(edges.csv.filepath, info.csv.filepath
       rename(Focus2=geographical_focus) %>%
       rename(Specialization2=specialization) 
     
+    df <-df %>% filter(!Group1=="local person" & !Group2=="local person")
 
     #df$Group1 = sapply(df$Group1, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line texts for the sake of visibility in the plot
    # df$Group2 = sapply(df$Group2, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line texts for the sake of visibility in the plot
@@ -215,7 +216,7 @@ prepare.input.for.chord.diagram = function(edges.csv.filepath, info.csv.filepath
 #  Currently, there are 3 grouping information: 1) source types, 2) geographic focus, 3) specialization
 #
 ########################################################################
-create.chord.diagram = function(links.filepath, output.filepath, output.nodes.legend, colors.for.groups, small.gap, big.gap, include_legend = T){
+create.chord.diagram = function(links.filepath, output.filepath, output.nodes.legend, output.df.diagram, colors.for.groups, small.gap, big.gap, include_legend = T, label = "A)"){
 
     # ========================================================================================
     # prepare the data: combine both data frames
@@ -246,13 +247,13 @@ create.chord.diagram = function(links.filepath, output.filepath, output.nodes.le
     
     # ========================================================================================
     # plot chord diagram
-    # ========================================================================================
+    # ####========================================================================================
 
    # pdf(output.filepath)
     png(output.filepath, units="in", width=10, height=10, res=300)
     
     # directional = 1,
-    chordDiagram(df.links[,c("Var1","Var2","value")], group = group, grid.col = grid.col.for.group, preAllocateTracks = list(list(track.height = 0.05),list(track.height = 0.05),list(track.height = 0.1),list(track.height = 0.025)), annotationTrack = "grid", small.gap = small.gap, big.gap = big.gap)
+    dfDiagram <- chordDiagram(df.links[,c("Var1","Var2","value")], group = group, grid.col = grid.col.for.group, preAllocateTracks = list(list(track.height = 0.05),list(track.height = 0.05),list(track.height = 0.1),list(track.height = 0.025)), annotationTrack = "grid", small.gap = small.gap, big.gap = big.gap)
 
     circos.track(track.index = 4, panel.fun = function(x, y) {
         circos.text(CELL_META$xcenter, CELL_META$ylim[1], CELL_META$sector.index, col = "black", cex=0.33,
@@ -261,9 +262,10 @@ create.chord.diagram = function(links.filepath, output.filepath, output.nodes.le
     )
     }, bg.border = NA) # here set bg.border to NA is important
 
+    text(-0.8, 0.8, label, cex = 1.5)
 
-    for(i in 1:length(df.group$Group)){
-        g = df.group$Group[i]
+   for(i in 1:length(df.group$Group)){
+       g = df.group$Group[i]
         highlight.sector(sector.index = df.group$Var[which(df.group$Group == g)], track.index = 3, col = grid.col.for.group[i], text = "", cex = 0.6, text.col = "black")
     }
     
@@ -271,9 +273,15 @@ create.chord.diagram = function(links.filepath, output.filepath, output.nodes.le
     # create a legend 
     # ================
     if (include_legend) {
-      lgd2 = Legend(at = names(colors.for.groups), type = "points", legend_gp = gpar(col = colors.for.groups, lwd = 2), title_position = "topleft", title = "Type of sources")
-      draw(lgd2, x = unit(4, "mm"), y = unit(4, "mm"), just = c("left", "bottom"))
-      
+      lgd2 = Legend(at = names(colors.for.groups), type = "points", legend_gp = gpar(col = colors.for.groups, lwd = 6), 
+                    labels_gp = gpar(fontsize = 13),
+                    grid_height = unit(6, "mm"),
+                    grid_width = unit(10, "mm"), 
+                    size = unit(5, "mm"), 
+                    nrow = 3, ncol = 5,
+                    title_gp = gpar(fontsize = 13, fontface = "bold"), title_position = "topleft", title = "Type of sources:")
+     # draw(lgd2, x = unit(1, "mm"), y = unit(4, "mm"), just = c("left", "bottom"))
+      draw(lgd2, x = unit(0.5, "npc"), y = unit(0.05, "npc"))
     }
 
     dev.off()
@@ -283,13 +291,15 @@ create.chord.diagram = function(links.filepath, output.filepath, output.nodes.le
     # ===============================
     # Export the legend of nodes id
     # ===============================
-    write.table(data.frame("id" = vertex.ids, "source" = uniques), output.nodes.legend, sep=";", row.names = F, col.names = T)
+    dfLegendNodes <- data.frame("id" = as.character(vertex.ids), "source" = uniques)
+    dfDiagram <- merge(dfDiagram, dfLegendNodes, by.x = "rn", by.y = "id")
+    colnames(dfDiagram)[ncol(dfDiagram)] <- "receptor_name"
+    dfDiagram <- merge(dfDiagram, dfLegendNodes, by.x = "cn", by.y = "id", all.x = T)
+    colnames(dfDiagram)[ncol(dfDiagram)] <- "emitter_name"
+    dfDiagram <- dfDiagram %>% rename(receptor_id = rn, emitter_id = cn, value = value1)%>% 
+      select(receptor_id, emitter_id, receptor_name, emitter_name, value)
+    write.table(dfLegendNodes, output.nodes.legend, sep=";", row.names = F, col.names = T)
+    write.table(dfDiagram, output.df.diagram, sep=";", row.names = F, col.names = T)
 
 }
 
-##############################################################################
-# MAIN
-##############################################################################
-
-#csv.folder = "/home/nejat/Test"
-csv.folder = "C:/Users/vals3103/OneDrive - USherbrooke/Bureau/SNA" # TODO: replace it with your own absolute folder path
