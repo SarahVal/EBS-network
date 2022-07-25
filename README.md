@@ -1,2 +1,2 @@
-# network_ebs
- This repository contains the code used for the analysis of event-based surveillance networks of PADI-web and HealthMap.
+# EBS-network
+ This repository contains the code used for the analysis of the dissemination of avian influenza events in two event-based surveillance tools, PADI-web and HealthMap. Data are available on a Dryad repository ##.
