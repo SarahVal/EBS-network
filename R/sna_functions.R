@@ -178,10 +178,10 @@ create_sp_focus_plot <-
            df_late_hm,
            df_early_pw,
            df_early_hm,
-           
            column,
            levels,
-           size_font = 14) {
+           size_font = 14,
+           common_label = "Primary sources") {
     font_param <- element_text(color = 'black',  size = size_font)
     
     df_late <-
@@ -198,6 +198,8 @@ create_sp_focus_plot <-
     df <- bind_rows(df_late, df_early)
     df <-
       bind_cols(df, variable =  factor(df[, column], levels = levels))
+    df <-
+      bind_cols(df, common_facet = common_label)
     
     plot_df <- df %>%
       ggplot(aes(
@@ -223,7 +225,9 @@ create_sp_focus_plot <-
       
       geom_bar(stat = "identity",
                width = 0.5,
-               position = "dodge") + facet_wrap(detection ~ .) +
+               position = "dodge") +# facet_wrap(detection ~ .) + 
+      facet_nested(~ common_facet + detection, nest_line = element_line(linetype = 1)) +
+    theme(strip.background = element_blank()) +
       scale_fill_manual(values = c("#6b7cb6", "#FF5733")) +
       guides(fill = guide_legend(title = ""))    +
       xlab("") + ylab("Frequency")

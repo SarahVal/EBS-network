@@ -28,42 +28,43 @@ source("./R/create_chord_diagrams.R")
 
 # 1. Data Import
 
+Data can be imported from:
 
 ```{r, message=FALSE, warning=F}
 
 # Reports from PADI-web
-REPORTS_PW <- read_delim("./dataverse/padiweb_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
+REPORTS_PW <- read_delim("./data/padiweb_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
 
 # Reports from HealthMap
-REPORTS_HM <- read_delim("./dataverse/healthmap_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
+REPORTS_HM <- read_delim("./data/healthmap_reports.csv", show_col_types = FALSE) %>% mutate(publication_date = as.Date(publication_date, format="%Y-%m-%d"))
 
 # Events empres-i database
-OIE_EVENTS  <- open_official_AI("./dataverse/AI_official.csv", date_format =  "%Y-%m-%d")
+OIE_EVENTS  <- open_official_AI("./data/AI_official.csv", date_format =  "%Y-%m-%d")
 OIE_EVENTS <- filter(OIE_EVENTS, reportingdate >= "2018-07-01") %>% filter(reportingdate <= "2019-06-30")
 
 # Manually recorded non-official events
-UNOFFICIAL_EVENTS <- read_delim("./dataverse/unofficial_events.csv", 
+UNOFFICIAL_EVENTS <- read_delim("./data/unofficial_events.csv", 
                                 delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
 
 # Sources
-SOURCES <- read_delim(file="./dataverse/sources.csv", delim=";", show_col_types = F) %>% mutate(label = str_trim(label))
+SOURCES <- read_delim(file="./data/sources.csv", delim=";", show_col_types = F) %>% mutate(label = str_trim(label))
 
 # Tables for PADI-web network
-EVENTS_PW <- read_delim("./dataverse/padiweb_events.csv", 
+EVENTS_PW <- read_delim("./data/padiweb_events.csv", 
                         delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
-PATHS_PW <- read_delim("./dataverse/padiweb_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_PW <- read_delim("./data/padiweb_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
 PATHS_PW$source_1 <- str_trim(PATHS_PW$source_1)
 PATHS_PW$source_2 <- str_trim(PATHS_PW$source_2)
-PATHS_EVENTS_PW <- read_delim("./dataverse/padiweb_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_EVENTS_PW <- read_delim("./data/padiweb_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
 
 # Tables for HealthMap network
-EVENTS_HM <- read_delim("./dataverse/healthmap_events.csv", 
+EVENTS_HM <- read_delim("./data/healthmap_events.csv", 
                         delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
-PATHS_HM <- read_delim("./dataverse/healthmap_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_HM <- read_delim("./data/healthmap_paths.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
 PATHS_HM$source_1 <- str_trim(PATHS_HM$source_1)
 PATHS_HM$source_2 <- str_trim(PATHS_HM$source_2)
 PATHS_HM$id_from_source_1 <- as.character(PATHS_HM$id_from_source_1)
-PATHS_EVENTS_HM <- read_delim("./dataverse/healthmap_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
+PATHS_EVENTS_HM <- read_delim("./data/healthmap_paths_events.csv", delim  = ";", escape_double = FALSE, trim_ws = TRUE, show_col_types = F)
 
 ```
 
@@ -244,14 +245,18 @@ nrow(filter(PATHS_EVENTS_OFF_HM, type_host == "domestic") %>% filter(timeliness<
 
 ```{r, warning=F}
 timeliness_pw <- create_timeliness_plot(df_timeliness_pw, min_timeliness = -30, max_timeliness = 30, size_font = 14, label = "A)")
-timeliness_pw %>% ggexport(filename = "./figures/Fig2a.png", width = 800, height = 480)
-timeliness_pw
+timeliness_hm <-create_timeliness_plot(df_timeliness_hm, min_timeliness = -30, max_timeliness = 30, size_font = 14, label = "B)")
+
 ```
 
 ```{r , warning=FALSE}
-timeliness_hm <-create_timeliness_plot(df_timeliness_hm, min_timeliness = -30, max_timeliness = 30, size_font = 14, label = "B)")
-timeliness_hm %>% ggexport(filename = "./figures/Fig2b.png", width = 800, height = 480)
-timeliness_hm
+ggarrange(timeliness_pw, timeliness_hm, nrow=2, common.legend = TRUE, legend="bottom") %>% ggsave(
+  filename = "./figures/Fig2.png",
+  width = 8,
+  height = 8,
+  dpi = 300
+)
+
 ```
 
 ## 2.5. Paths metrics
@@ -312,22 +317,28 @@ SOURCES_HM %>%
 ```{r}
 n_unique = SOURCES_PW$source[!SOURCES_PW$source %in% SOURCES_HM$source] %>% length()
 
-rbind(SOURCES_PW %>% filter(!source %in% SOURCES_HM$source) %>%
+padiweb_sources <- merge(SOURCES_PW%>% count(type_source),
+  SOURCES_PW %>% filter(!source %in% SOURCES_HM$source) %>%
         count(type_source) %>% 
-        arrange(desc(n)) %>%          
-        mutate(prop = prop.table(n)),
-      c("total", n_unique, 1))
+        rename(n_unique = n) %>% 
+        arrange(desc(n_unique)) %>%          
+        mutate(prop_unique = prop.table(n_unique)),
+  all.x = T)
+write.table(padiweb_sources, "./tables/df_padiweb_sources.csv", sep = ";", row.names = F, col.names = T)
 
 ```
 #### Sources specific to HealthMap network
 ```{r}
-n_unique = SOURCES_HM$source[!SOURCES_HM$source %in% SOURCES_HM$source] %>% length()
+n_unique <- SOURCES_HM$source[!SOURCES_HM$source %in% SOURCES_PW$source] %>% length()
 
-rbind(SOURCES_HM %>% filter(!source %in% SOURCES_PW$source) %>%
+healthmap_sources <- merge(SOURCES_HM%>% count(type_source),
+  SOURCES_HM %>% filter(!source %in% SOURCES_PW$source) %>%
         count(type_source) %>% 
-        arrange(desc(n)) %>%          
-        mutate(prop = prop.table(n)),
-      c("total", n_unique, 1))
+        rename(n_unique = n) %>% 
+        arrange(desc(n_unique)) %>%          
+        mutate(prop_unique = prop.table(n_unique)),
+  all.x = T)
+write.table(healthmap_sources, "./tables/df_hm_sources.csv", sep = ";", row.names = F, col.names = T)
 
 ```
 
@@ -596,7 +607,8 @@ Secondary sources:
 ```{r}
 plot_focus_secondary <- create_sp_focus_plot(secondary_late_pw_focus_aggr, secondary_late_hm_focus_aggr,
                                              secondary_early_pw_focus_aggr, secondary_early_hm_focus_aggr,
-                                             column = "geographical_focus", levels = c("local", "national", "international")) 
+                                             column = "geographical_focus", levels = c("local", "national", "international"),
+           common_label = "Secondary sources") 
 
 plot_focus_secondary
 ```
@@ -800,9 +812,9 @@ padiweb.links.filepath = "./tables/links_padiweb.csv"
 healthmap.links.filepath = "./tables/links_healthmap.csv"
 
 padiweb.edges.csv.filepath = "./tables/paths_pw_diagram.csv"
-padiweb.info.csv.filepath = "./dataverse/sources.csv"
+padiweb.info.csv.filepath = "./data/sources.csv"
 healthmap.edges.csv.filepath = "./tables/paths_hm_diagram.csv"
-healthmap.info.csv.filepath = "./dataverse/sources.csv"
+healthmap.info.csv.filepath = "./data/sources.csv"
 
 groups = retrieve.group.names(padiweb.info.csv.filepath)
 groups.adjusted = sapply(groups, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line group names for the sake of readibility in the plot, the same as in the function 'prepare.input.for.chord.diagram()' >> for color assignment, we need to reproduce these text adjustments here, as well
