@@ -196,7 +196,7 @@ prepare.input.for.chord.diagram = function(edges.csv.filepath, info.csv.filepath
       rename(Focus2=geographical_focus) %>%
       rename(Specialization2=specialization) 
     
-    df <-df %>% filter(!Group1=="local person" & !Group2=="local person")
+   # df <-df %>% filter(!Group1=="local person" & !Group2=="local person")
 
     #df$Group1 = sapply(df$Group1, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line texts for the sake of visibility in the plot
    # df$Group2 = sapply(df$Group2, function(x){ parts = split.text.into.two.parts(x); return(paste0(parts[1],"\n",parts[2]))}) # make 2-line texts for the sake of visibility in the plot
@@ -236,7 +236,7 @@ create.chord.diagram = function(links.filepath, output.filepath, output.nodes.le
     df.new = rbind(df1,df2)
     levels = c( "EBS\n tool", "international\n vet auth.","national\n vet auth.","local\n vet auth." ,
                   "national\n off. auth.", "local\n off. auth.", "press\n agency",  "social\n platform", "radio,\n TV",
-                  "online\n news source" , "labo\nratory"  ,"research\n org.", "other"  )
+                  "online\n news source" , "labo\nratory"  ,"research\n org.", "local\n person"  )
     levels <- levels[levels%in%unique(df.new$Group)]
     df.group = aggregate(df.new$value, by=list(Var=df.new$Var, Group=df.new$Group, Focus=df.new$Focus, Specialization=df.new$Specialization), FUN=sum)
     df.group = df.group[order(df.group$Group,df.group$Focus,df.group$Specialization),]

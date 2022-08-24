@@ -19,6 +19,7 @@ library(igraph)
 library(stringr)
 library(ggpubr)
 library(readr)
+library(ggh4x)
 library(RColorBrewer)
 setwd("C:/GitHub/network_ebs")
 source("./R/sna_functions.R")
@@ -798,7 +799,9 @@ write.table(
 )
 
 ```
-
+```{r}
+length(unique(c(PATHS_PW_DIAGRAM$Source, PATHS_PW_DIAGRAM$Target)))
+```
 ```{r}
 padiweb.output.filepath = "./figures/Fig3a.png"
 padiweb.output.nodes.legend = "./tables/Table_Fig3a.csv"
@@ -826,7 +829,7 @@ new_levels <- c("international vet auth.", "EBS tool",
                 "radio, TV",  "national vet auth.",
                 "laboratory", "local off. auth.", 
                 "local vet auth.", "private company",                   
-                "national off. auth.")
+                "national off. auth.", "local person")
 
 # Fill colour
 colors.for.group <- c(brewer.pal(8,'Dark2'), brewer.pal(name="Paired", n = length(new_levels)-8))
