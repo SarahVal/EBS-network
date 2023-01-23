@@ -179,10 +179,12 @@ PATHS_EVENTS_OFF_PW$timeliness <- as.numeric(difftime(PATHS_EVENTS_OFF_PW$date_e
                                                       units="days"))
 
 
+host_levels <-  c("domestic", "wild", "environmental", "unspecified")
+
 # For each event, detect the first report which detected it
 df_timeliness_pw <- PATHS_EVENTS_OFF_PW %>% select(id_event, type_host, timeliness) %>%
   group_by(id_event, type_host) %>% 
-  filter(timeliness == min(timeliness)) %>% unique()
+  filter(timeliness == min(timeliness)) %>% unique() %>% mutate(Host = factor(type_host, levels = host_levels))
 
 summary(df_timeliness_pw$timeliness)
 
@@ -194,12 +196,10 @@ length(which(df_timeliness_pw$timeliness>=0))
 
 ```
 ```{r}
-host_levels <-  c("domestic", "wild", "environmental", "unspecified")
-df_timeliness_pw <- df_timeliness_pw %>% mutate(Host = factor(type_host, levels = host_levels)) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_pw))
-
-nrow(filter(PATHS_EVENTS_OFF_PW, type_host == "wild") %>% filter(timeliness<0))
-nrow(filter(PATHS_EVENTS_OFF_PW, type_host == "domestic") %>% filter(timeliness<0))
+nrow(filter(df_timeliness_pw, type_host == "wild") %>% filter(timeliness<0))
+nrow(filter(df_timeliness_pw, type_host == "domestic") %>% filter(timeliness<0))
 ```
+
 
 ```{r}
 # Official events
@@ -228,20 +228,25 @@ df_timeliness_hm <- PATHS_EVENTS_OFF_HM %>% select(id_event, type_host, timeline
 df_timeliness_hm <- df_timeliness_hm %>% mutate(Host = factor(type_host, levels = host_levels))
 
 
-df_timeliness_hm <- df_timeliness_hm %>% select(-id_event) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_hm))
-
-
 summary(PATHS_EVENTS_OFF_HM$timeliness)
 
 # Early detection
-length(which(PATHS_EVENTS_OFF_HM$timeliness<0))
+length(which(df_timeliness_hm$timeliness<0))
 
 # Late detection
-length(which(PATHS_EVENTS_OFF_HM$timeliness>=0))
+length(which(df_timeliness_hm$timeliness>=0))
+
+
+nrow(filter(df_timeliness_hm, type_host == "wild") %>% filter(timeliness<0))
+nrow(filter(df_timeliness_hm, type_host == "domestic") %>% filter(timeliness<0))
+
 ```
 ```{r}
-nrow(filter(PATHS_EVENTS_OFF_HM, type_host == "wild") %>% filter(timeliness<0))
-nrow(filter(PATHS_EVENTS_OFF_HM, type_host == "domestic") %>% filter(timeliness<0))
+
+df_timeliness_pw <- df_timeliness_pw %>% select(-id_event) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_pw))
+
+df_timeliness_hm <- df_timeliness_hm %>% select(-id_event) %>% group_by(timeliness, Host) %>% count() %>% mutate(n = n*100/nrow(df_timeliness_hm))
+
 ```
 
 ```{r, warning=F}
@@ -252,10 +257,17 @@ timeliness_hm <-create_timeliness_plot(df_timeliness_hm, min_timeliness = -30, m
 
 ```{r , warning=FALSE}
 ggarrange(timeliness_pw, timeliness_hm, nrow=2, common.legend = TRUE, legend="bottom") %>% ggsave(
-  filename = "./figures/Fig2.png",
+  filename = "./figures/Fig1.tiff",
   width = 8,
   height = 8,
   dpi = 300
+)
+
+ggarrange(timeliness_pw, timeliness_hm, nrow=2, common.legend = TRUE, legend="bottom") %>% ggsave(
+  filename = "./figures/Fig1low.tiff",
+  width = 8,
+  height = 8,
+  dpi = 200
 )
 
 ```
@@ -267,10 +279,12 @@ ggarrange(timeliness_pw, timeliness_hm, nrow=2, common.legend = TRUE, legend="bo
 ```{r , echo=FALSE}
 # PADI-web
 reactivity_pw <- calc_reactivity(PATHS_PW)
+table(reactivity_pw$reactivity)
 table(reactivity_pw$reactivity)/nrow(reactivity_pw)
 
 # HealthMap
 reactivity_hm <- calc_reactivity(PATHS_HM)
+table(reactivity_hm$reactivity)
 table(reactivity_hm$reactivity)/nrow(reactivity_hm)
 ```
 ### Length 
@@ -325,7 +339,7 @@ padiweb_sources <- merge(SOURCES_PW%>% count(type_source),
         arrange(desc(n_unique)) %>%          
         mutate(prop_unique = prop.table(n_unique)),
   all.x = T)
-write.table(padiweb_sources, "./tables/df_padiweb_sources.csv", sep = ";", row.names = F, col.names = T)
+#write.table(padiweb_sources, "./tables/df_padiweb_sources.csv", sep = ";", row.names = F, col.names = T)
 
 ```
 #### Sources specific to HealthMap network
@@ -339,7 +353,7 @@ healthmap_sources <- merge(SOURCES_HM%>% count(type_source),
         arrange(desc(n_unique)) %>%          
         mutate(prop_unique = prop.table(n_unique)),
   all.x = T)
-write.table(healthmap_sources, "./tables/df_hm_sources.csv", sep = ";", row.names = F, col.names = T)
+#write.table(healthmap_sources, "./tables/df_hm_sources.csv", sep = ";", row.names = F, col.names = T)
 
 ```
 
@@ -466,9 +480,9 @@ plot_late_hm <-
   )
 
 ggarrange(plot_late_pw, plot_late_hm, nrow=1, common.legend = TRUE) %>% ggsave(
-  filename = "./figures/Fig5.png",
+  filename = "./figures/Fig3.tiff",
   width = 12,
-  height = 5,
+   height = 5,
   dpi = 300
 )
 ```
@@ -503,11 +517,12 @@ order_source <- c(
 
 plot_early_pw <-
   create_source_plot(df_plot_early_pw, min_prop = 0, order_source = order_source,
-                     label = "A)",   x_label=10.3, y_label=-0.5)
+                     label = "A)",  limits=c(-0.5,0.3), x_label=10.3, y_label=-0.5)
 plot_early_hm <-
   create_source_plot(
     df_plot_early_hm ,
     order_source = order_source,
+    limits=c(-0.5,0.3),
     position_x_axis = "top",
     y_axis = F,
     label = "B)",   x_label=10.3, y_label=-0.5,
@@ -515,7 +530,7 @@ plot_early_hm <-
   )
 
 ggarrange(plot_early_pw, plot_early_hm, nrow=1, common.legend = TRUE) %>% ggsave(
-  filename = "./figures/Fig6.png",
+  filename = "./figures/Fig4.tiff",
   width = 12,
   height = 5,
   dpi = 300
@@ -525,11 +540,11 @@ ggarrange(plot_early_pw, plot_early_hm, nrow=1, common.legend = TRUE) %>% ggsave
 
 Export reference tables for the graphics
 ```{r}
-write.table(df_plot_late_pw, "./tables/df_Fig5a.csv", sep = ";", row.names = F, col.names = T)
-write.table(df_plot_late_hm, "./tables/df_Fig5b.csv", sep = ";", row.names = F, col.names = T)
+write.table(df_plot_late_pw, "./tables/S8_Table_PW.csv", sep = ";", row.names = F, col.names = T)
+write.table(df_plot_late_hm, "./tables/S8_Table_HM.csv", sep = ";", row.names = F, col.names = T)
 
-write.table(df_plot_early_pw, "./tables/df_Fig6a.csv", sep = ";", row.names = F, col.names = T)
-write.table(df_plot_early_hm, "./tables/df_Fig6b.csv", sep = ";", row.names = F, col.names = T)
+write.table(df_plot_early_pw, "./tables/S9_Table_PW.csv", sep = ";", row.names = F, col.names = T)
+write.table(df_plot_early_hm, "./tables/S9_Table_HM.csv", sep = ";", row.names = F, col.names = T)
 
 ```
 
@@ -558,13 +573,32 @@ secondary_unoff_hm_aggr <- aggregate_source(secondary_unoff_hm)
 primary_unoff_pw_aggr <- aggregate_source(primary_unoff_pw)
 primary_unoff_hm_aggr <- aggregate_source(primary_unoff_hm)
 
+table10 <- 
 bind_rows(bind_cols(primary_unoff_pw_aggr, "type" = "primary"),
           bind_cols(secondary_unoff_pw_aggr, "type" = "secondary"))
 bind_rows(bind_cols(primary_unoff_hm_aggr, "type" = "primary"),
           bind_cols(secondary_unoff_hm_aggr, "type" = "secondary"))
 
 ```
+ 
+         
+```{r}
 
+table10 <- merge(primary_unoff_pw_aggr, secondary_unoff_pw_aggr, by= "type_source",all=T) %>% merge(primary_unoff_hm_aggr, by= "type_source",all=T)%>% merge(secondary_unoff_hm_aggr, by= "type_source",all=T)
+table10 <- table10[ , c(1,2,4,6,8)] %>% setNames(c("Type of source", "n", "Secondary (PADI-web)", "Primary (Health-Map)", "Secondary (Health-Map)")) %>% arrange(desc(n)) 
+colnames(table10)[2] <- "Primary (PADI-web)"
+table10[is.na(table10)] <- 0
+table10
+
+
+write.table(
+  table10,
+  "./tables/Table10.csv",
+  sep = ";",
+  row.names = F,
+  col.names = T
+)
+```
 ## 3.4. Distribution per geographical focus
 
 ```{r}
@@ -616,7 +650,7 @@ plot_focus_secondary
 ```{r}
 
 ggarrange(plot_focus_primary, plot_focus_secondary, nrow=2, common.legend = TRUE, legend="right") %>% ggsave(
-  filename = "./figures/Fig7.png",
+  filename = "./figures/Fig5.tiff",
   width = 10,
   height = 8,
   dpi = 300
@@ -674,7 +708,7 @@ plot_specialization_secondary
 ```{r}
 
 ggarrange(plot_specialization_primary, plot_specialization_secondary, nrow=2, common.legend = TRUE, legend="right") %>% ggsave(
-  filename = "./figures/FigSupp1.png",
+  filename = "./figures/FigSupp2.tiff",
   width = 10,
   height = 8,
   dpi = 300
@@ -698,6 +732,35 @@ PATHS_NETWORK_HM <- create_df_network(PATHS_HM, SOURCES)
 g_hm <- graph.data.frame(PATHS_NETWORK_HM, directed = TRUE)
 
 ```
+
+```{r}
+NETWORK_PW_SOURCES <- rbind(setNames(PATHS_NETWORK_PW[,c("Source", "Source_type")], c("source", "source_type")), setNames(PATHS_NETWORK_PW[,c("Target", "Target_type")], c("source", "source_type")))
+NETWORK_PW_SOURCES <- NETWORK_PW_SOURCES %>% distinct() %>% select(source_type) %>% group_by(source_type) %>% count(source_type) 
+NETWORK_PW_SOURCES$prop = round(NETWORK_PW_SOURCES$n*100/sum(NETWORK_PW_SOURCES$n),1)
+```
+
+```{r}
+NETWORK_HM_SOURCES <- rbind(setNames(PATHS_NETWORK_HM[,c("Source", "Source_type")], c("source", "source_type")), setNames(PATHS_NETWORK_HM[,c("Target", "Target_type")], c("source", "source_type")))
+NETWORK_HM_SOURCES <- NETWORK_HM_SOURCES %>% distinct() %>% select(source_type) %>% group_by(source_type) %>% count(source_type) 
+NETWORK_HM_SOURCES$prop = round(NETWORK_HM_SOURCES$n*100/sum(NETWORK_HM_SOURCES$n),1)
+```
+
+
+```{r}
+table2 <- merge(NETWORK_PW_SOURCES,
+      setNames(NETWORK_HM_SOURCES, c("source_type", "Health-Map (n)", "Health-Map  (prop)"))) %>% arrange(desc(n))  %>%
+ setNames(c("Type of source", "PADI-web (n)", "PADI-web (prop)", "Health-Map (n)", "Health-Map  (prop)"))
+
+write.table(
+  table2,
+  "./tables/Table2.csv",
+  sep = ";",
+  row.names = F,
+  col.names = T
+)
+
+```
+
 ### 3.2. Graph characteristics
 
 #### Nodes
@@ -739,7 +802,7 @@ ggarrange(
   common.legend = TRUE,
   legend = "right"
 ) %>% ggsave(
-  filename = "./figures/Fig4.png",
+  filename = "./figures/Fig2.tiff",
   width = 8,
   height = 7,
   dpi = 300
@@ -758,17 +821,17 @@ Most important sources in terms of degree or centrality values
 
 Higest in-degree
 ```{r}
-nodes %>% slice_max(in_degree, n = 5)
+nodes %>% slice_max(in_degree, n = 7)
 ```
 
 Higest out-degree
 ```{r}
-nodes %>% slice_max(out_degree, n = 5)
+nodes %>% slice_max(out_degree, n = 7)
 ```
 
 Higest all-degree
 ```{r}
-nodes %>% slice_max(all_degree, n = 5)
+nodes %>% slice_max(all_degree, n = 7)
 ```
 
 
@@ -799,17 +862,15 @@ write.table(
 )
 
 ```
-```{r}
-length(unique(c(PATHS_PW_DIAGRAM$Source, PATHS_PW_DIAGRAM$Target)))
-```
-```{r}
-padiweb.output.filepath = "./figures/Fig3a.png"
-padiweb.output.nodes.legend = "./tables/Table_Fig3a.csv"
-padiweb.output.df.diagram = "./tables/Table2_Fig3a.csv"
 
-healthmap.output.filepath = "./figures/Fig3b.png"
-healthmap.output.nodes.legend = "./tables/Table_Fig3b.csv"
-healthmap.output.df.diagram = "./tables/Table2_Fig3b.csv"
+```{r}
+padiweb.output.filepath = "./figures/S1_Fig_A.png"
+padiweb.output.nodes.legend = "./tables/S4_Table.csv"
+padiweb.output.df.diagram = "./tables/S6_Table.csv"
+
+healthmap.output.filepath = "./figures/S1_Fig_B.png"
+healthmap.output.nodes.legend = "./tables/S5_Table.csv"
+healthmap.output.df.diagram = "./tables/S7_Table.csv"
 
 padiweb.links.filepath = "./tables/links_padiweb.csv"
 healthmap.links.filepath = "./tables/links_healthmap.csv"
@@ -843,7 +904,7 @@ prepare.input.for.chord.diagram(padiweb.edges.csv.filepath, padiweb.info.csv.fil
 small.gap = 0.5
 big.gap = 1.8 
 create.chord.diagram(padiweb.links.filepath, padiweb.output.filepath, padiweb.output.nodes.legend,
-                     healthmap.output.df.diagram,
+                     padiweb.output.df.diagram,
                      colors.for.group,  small.gap, 
                      big.gap, include_legend = F, label = "A)")
 ```
