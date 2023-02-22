@@ -517,12 +517,11 @@ order_source <- c(
 
 plot_early_pw <-
   create_source_plot(df_plot_early_pw, min_prop = 0, order_source = order_source,
-                     label = "A)",  limits=c(-0.5,0.3), x_label=10.3, y_label=-0.5)
+                     label = "A)",   x_label=10.3, y_label=-0.5)
 plot_early_hm <-
   create_source_plot(
     df_plot_early_hm ,
     order_source = order_source,
-    limits=c(-0.5,0.3),
     position_x_axis = "top",
     y_axis = F,
     label = "B)",   x_label=10.3, y_label=-0.5,
